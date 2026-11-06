@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these data or this code, please cite them as below."
+title: "Landslide and disturbance legacies in the broadleaf forests of Taiwan: data, code and verification chain"
+version: 1.0.0
+date-released: 2026-11-06
+license: MIT
+repository-code: "https://github.com/GeoAI-Sustainability-Lab/broadleaf-landslide-legacy"
+authors:
+  - family-names: Hsu
+    given-names: Yu-Chun
+    affiliation: "Department of Forestry, National Chung Hsing University, Taichung, Taiwan"
+    orcid: "https://orcid.org/0000-0002-6616-6906"
+keywords:
+  - landslide
+  - legacy
+  - broadleaf forest
+  - case-control
+  - LandTrendr
+  - Taiwan
