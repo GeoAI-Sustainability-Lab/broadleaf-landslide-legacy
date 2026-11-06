@@ -1,0 +1,200 @@
+{
+ "n_points_with_s2": 20585,
+ "share_valid_years": {
+  "2019": 0.9984940490648531,
+  "2020": 0.9998542628127277,
+  "2021": 0.9998056837503037,
+  "2022": 0.9996599465630314,
+  "2023": 0.9984940490648531,
+  "2024": 0.998979839689094
+ },
+ "median_obs_by_year": {
+  "2019": 24.0,
+  "2020": 30.0,
+  "2021": 26.0,
+  "2022": 25.0,
+  "2023": 20.0,
+  "2024": 23.0
+ },
+ "agreement": {
+  "all": {
+   "n_pairs": 33120,
+   "lt_rate": 0.015821256038647345,
+   "s2_rate": 0.08903985507246377,
+   "both": 326,
+   "lt_only": 198,
+   "s2_only": 2623,
+   "P(s2|lt)": 0.6221374045801527,
+   "P(lt|s2)": 0.11054594777890811,
+   "kappa": 0.16530713017480603,
+   "same_year_share_among_both": 0.6625766871165644
+  },
+  "broadleaf": {
+   "n_pairs": 23036,
+   "lt_rate": 0.016452509116166,
+   "s2_rate": 0.08825316895294322,
+   "both": 240,
+   "lt_only": 139,
+   "s2_only": 1793,
+   "P(s2|lt)": 0.633245382585752,
+   "P(lt|s2)": 0.11805213969503198,
+   "kappa": 0.1761559746101105,
+   "same_year_share_among_both": 0.6458333333333334
+  },
+  "broadleaf_class0": {
+   "n_pairs": 19180,
+   "lt_rate": 0.009801876955161626,
+   "s2_rate": 0.07857142857142857,
+   "both": 113,
+   "lt_only": 75,
+   "s2_only": 1394,
+   "P(s2|lt)": 0.601063829787234,
+   "P(lt|s2)": 0.07498341074983411,
+   "kappa": 0.11795989089224715,
+   "same_year_share_among_both": 0.6283185840707964
+  },
+  "broadleaf_le39.5": {
+   "n_pairs": 14736,
+   "lt_rate": 0.014386536373507057,
+   "s2_rate": 0.08475841476655809,
+   "both": 130,
+   "lt_only": 82,
+   "s2_only": 1119,
+   "P(s2|lt)": 0.6132075471698113,
+   "P(lt|s2)": 0.10408326661329063,
+   "kappa": 0.15722990592255603,
+   "same_year_share_among_both": 0.676923076923077
+  }
+ },
+ "recall_catalog_scars_2020plus": {
+  "n_pos_pairs": 109,
+  "recall_lt": 0.29357798165137616,
+  "recall_s2": 0.42201834862385323,
+  "recall_either": 0.46788990825688076,
+  "recall_both": 0.24770642201834864,
+  "by_scar_year": [
+   {
+    "scar_year": 2021,
+    "n": 18,
+    "recall_lt": 0.389,
+    "recall_s2": 0.833
+   },
+   {
+    "scar_year": 2022,
+    "n": 4,
+    "recall_lt": 0.5,
+    "recall_s2": 0.75
+   },
+   {
+    "scar_year": 2023,
+    "n": 56,
+    "recall_lt": 0.268,
+    "recall_s2": 0.339
+   },
+   {
+    "scar_year": 2024,
+    "n": 31,
+    "recall_lt": 0.258,
+    "recall_s2": 0.29
+   }
+  ]
+ },
+ "class3_alternatives_event_2021plus": {
+  "c3_lt": {
+   "n": 26589,
+   "n_cases": 5627,
+   "n_exposed_cases": 57,
+   "n_exposed_control_rows": 139,
+   "OR": 2.2252038047855796,
+   "ci_cluster": [
+    1.563931390081572,
+    3.166080049441272
+   ]
+  },
+  "c3_s2": {
+   "n": 26589,
+   "n_cases": 5627,
+   "n_exposed_cases": 343,
+   "n_exposed_control_rows": 1328,
+   "OR": 1.4226276306940895,
+   "ci_cluster": [
+    1.2163262734201348,
+    1.6639198049413575
+   ]
+  },
+  "c3_both": {
+   "n": 26589,
+   "n_cases": 5627,
+   "n_exposed_cases": 40,
+   "n_exposed_control_rows": 74,
+   "OR": 2.827540785096318,
+   "ci_cluster": [
+    1.790823827865125,
+    4.46441842406915
+   ]
+  },
+  "c3_either": {
+   "n": 26589,
+   "n_cases": 5627,
+   "n_exposed_cases": 360,
+   "n_exposed_control_rows": 1393,
+   "OR": 1.4318984859323733,
+   "ci_cluster": [
+    1.2293703003283445,
+    1.6677914485715273
+   ]
+  },
+  "joint": {
+   "c3_lt": {
+    "OR": 1.9087161437624065,
+    "ci_cluster": [
+     1.3314801673946084,
+     2.7362009639152998
+    ]
+   },
+   "c3_s2": {
+    "OR": 1.3549616819592532,
+    "ci_cluster": [
+     1.1552949998838276,
+     1.589136246380762
+    ]
+   }
+  }
+ },
+ "s2_threshold_sensitivity": {
+  "100": {
+   "recall_catalog_2020plus": 0.42201834862385323,
+   "s2_rate_pairs": 0.0889657491473315,
+   "n_exposed_cases": 343,
+   "n_exposed_control_rows": 1328,
+   "OR": 1.4226276306940895,
+   "ci_cluster": [
+    1.2163262734201348,
+    1.6639198049413575
+   ]
+  },
+  "150": {
+   "recall_catalog_2020plus": 0.26605504587155965,
+   "s2_rate_pairs": 0.03223327088437335,
+   "n_exposed_cases": 134,
+   "n_exposed_control_rows": 420,
+   "OR": 1.821163430607128,
+   "ci_cluster": [
+    1.420013213701135,
+    2.335637590537776
+   ]
+  },
+  "200": {
+   "recall_catalog_2020plus": 0.1834862385321101,
+   "s2_rate_pairs": 0.014699524427150886,
+   "n_exposed_cases": 55,
+   "n_exposed_control_rows": 197,
+   "OR": 1.5554814010977587,
+   "ci_cluster": [
+    1.0787737569387874,
+    2.242845057731912
+   ]
+  }
+ },
+ "window_note": "S2 window 2019..cutoff_year-1; evaluable pairs need >=1 consecutive valid year pair; LandTrendr compared on the same window (loss segment ending 2020..Y-1); events with cutoff_year>=2021 only"
+}

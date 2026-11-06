@@ -1,0 +1,29 @@
+{
+ "status": "exploratory (written 2026-10-13 after all charter results); same draws as robust_v1.py; unrounded re-run 2026-10-29",
+ "seed": 20260924,
+ "ndraw": 4000,
+ "all": {
+  "AF": 0.41595122714532207,
+  "ci_mc_percentile": [
+   0.4006001539151811,
+   0.4299948496312774
+  ],
+  "ci_log1mAF": [
+   0.4009584365156369,
+   0.4305687787522622
+  ],
+  "n_cases": 5744
+ },
+ "le39_5": {
+  "AF": 0.45528606373808667,
+  "ci_mc_percentile": [
+   0.43404884811866273,
+   0.4746319009682718
+  ],
+  "ci_log1mAF": [
+   0.43487768181861663,
+   0.47495743344060637
+  ],
+  "n_cases": 2891
+ }
+}
