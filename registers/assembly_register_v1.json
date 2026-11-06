@@ -1,0 +1,18 @@
+{
+ "n_points": 20585,
+ "n_cases": 7454,
+ "n_controls": 13131,
+ "cases_own_inside": 6824,
+ "cases_own_outside_within100m": 629,
+ "cases_own_beyond100m": 0,
+ "own_event_label_mismatch": 0,
+ "cases_missing_own_before": 0,
+ "cases_before_is_range": 598,
+ "catalog_match_rows": 18342,
+ "state_match_rows": 25465,
+ "n_events": 39,
+ "controls_in_any_footprint": 10474,
+ "control_event_rows": 33105,
+ "isl_nearest_dist_median_m": 1420.8720616927135,
+ "isl_nearest_dist_p90_m": 6140.691544541093
+}

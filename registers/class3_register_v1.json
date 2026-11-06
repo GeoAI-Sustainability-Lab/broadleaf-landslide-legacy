@@ -1,0 +1,57 @@
+{
+ "threshold_x1000": 100.0,
+ "lt_pairs_fitted": 35580,
+ "lt_pairs_total": 35580,
+ "island_missing_pairs": 0,
+ "event_missing_rows": 0,
+ "broadleaf_island": {
+  "cases": {
+   "0": 2741,
+   "1": 836,
+   "2": 1521,
+   "3": 646
+  },
+  "controls": {
+   "0": 7313,
+   "1": 317,
+   "2": 292,
+   "3": 780
+  }
+ },
+ "bamboo_island": {
+  "cases": {
+   "0": 96,
+   "1": 32,
+   "2": 22,
+   "3": 21
+  },
+  "controls": {
+   "0": 574,
+   "1": 10,
+   "2": 14,
+   "3": 65
+  }
+ },
+ "broadleaf_class3_TSD": {
+  "case": {
+   "n": 646,
+   "median_TSD": 15.0,
+   "median_mag": 158.01895375039012,
+   "median_recovery": 0.9524823431286198
+  },
+  "control": {
+   "n": 780,
+   "median_TSD": 22.0,
+   "median_mag": 153.14987216724325,
+   "median_recovery": 0.9996726732644043
+  }
+ },
+ "lt_detected_share_by_class_broadleaf": {
+  "case_class0": 0.191,
+  "case_class1": 0.416,
+  "case_class2": 0.45,
+  "control_class0": 0.096,
+  "control_class1": 0.284,
+  "control_class2": 0.38
+ }
+}

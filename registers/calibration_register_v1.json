@@ -1,0 +1,170 @@
+{
+ "n_pos_pairs": 944,
+ "n_pos_points": 787,
+ "n_neg_pairs": 24451,
+ "n_neg_points": 11760,
+ "thresholds": {
+  "50": {
+   "recall_cal": 0.531,
+   "falsealarm_cal": 0.243,
+   "youden_cal": 0.288,
+   "recall_val": 0.52,
+   "falsealarm_val": 0.234
+  },
+  "75": {
+   "recall_cal": 0.503,
+   "falsealarm_cal": 0.147,
+   "youden_cal": 0.356,
+   "recall_val": 0.499,
+   "falsealarm_val": 0.137
+  },
+  "100": {
+   "recall_cal": 0.463,
+   "falsealarm_cal": 0.093,
+   "youden_cal": 0.37,
+   "recall_val": 0.463,
+   "falsealarm_val": 0.084
+  },
+  "125": {
+   "recall_cal": 0.429,
+   "falsealarm_cal": 0.065,
+   "youden_cal": 0.364,
+   "recall_val": 0.429,
+   "falsealarm_val": 0.052
+  },
+  "150": {
+   "recall_cal": 0.397,
+   "falsealarm_cal": 0.046,
+   "youden_cal": 0.351,
+   "recall_val": 0.397,
+   "falsealarm_val": 0.04
+  },
+  "175": {
+   "recall_cal": 0.367,
+   "falsealarm_cal": 0.035,
+   "youden_cal": 0.332,
+   "recall_val": 0.355,
+   "falsealarm_val": 0.032
+  },
+  "200": {
+   "recall_cal": 0.306,
+   "falsealarm_cal": 0.025,
+   "youden_cal": 0.28,
+   "recall_val": 0.304,
+   "falsealarm_val": 0.023
+  },
+  "250": {
+   "recall_cal": 0.227,
+   "falsealarm_cal": 0.017,
+   "youden_cal": 0.21,
+   "recall_val": 0.224,
+   "falsealarm_val": 0.015
+  },
+  "300": {
+   "recall_cal": 0.157,
+   "falsealarm_cal": 0.01,
+   "youden_cal": 0.147,
+   "recall_val": 0.161,
+   "falsealarm_val": 0.01
+  }
+ },
+ "chosen_threshold_x1000": 100,
+ "recall_val_by_band": [
+  {
+   "band": "<10",
+   "n": 5,
+   "recall": 0.2
+  },
+  {
+   "band": "10-20",
+   "n": 14,
+   "recall": 0.571
+  },
+  {
+   "band": "20-30",
+   "n": 88,
+   "recall": 0.58
+  },
+  {
+   "band": "30-39.5",
+   "n": 196,
+   "recall": 0.515
+  },
+  {
+   "band": ">=39.5",
+   "n": 170,
+   "recall": 0.341
+  }
+ ],
+ "recall_val_by_asp": [
+  {
+   "asp": "EW",
+   "n": 139,
+   "recall": 0.468
+  },
+  {
+   "asp": "N",
+   "n": 254,
+   "recall": 0.437
+  },
+  {
+   "asp": "S",
+   "n": 80,
+   "recall": 0.538
+  }
+ ],
+ "recall_val_by_elevband": [
+  {
+   "elevband": "<500",
+   "n": 75,
+   "recall": 0.48
+  },
+  {
+   "elevband": "500-1000",
+   "n": 173,
+   "recall": 0.503
+  },
+  {
+   "elevband": "1000-1500",
+   "n": 116,
+   "recall": 0.474
+  },
+  {
+   "elevband": ">1500",
+   "n": 109,
+   "recall": 0.376
+  }
+ ],
+ "recall_val_by_kind": [
+  {
+   "kind": "case",
+   "n": 341,
+   "recall": 0.46
+  },
+  {
+   "kind": "control",
+   "n": 132,
+   "recall": 0.47
+  }
+ ],
+ "recall_val_win0": 0.271,
+ "recall_val_win1": 0.463,
+ "recall_val_win2": 0.501,
+ "recall_val_by_scar_period": [
+  {
+   "scar_period": "2000-2009",
+   "size": 95,
+   "mean": 0.495
+  },
+  {
+   "scar_period": "2010-2017",
+   "size": 307,
+   "mean": 0.489
+  },
+  {
+   "scar_period": "2018-2025",
+   "size": 71,
+   "mean": 0.31
+  }
+ ]
+}

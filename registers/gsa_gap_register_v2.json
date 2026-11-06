@@ -1,0 +1,232 @@
+{
+ "status": "exploratory necessity check, written 2026-10-13 after all charter results; not in any charter",
+ "zones": {
+  "L0001": {
+   "name": "臺北市",
+   "plan_date": "2025-05-29"
+  },
+  "L0002_01": {
+   "name": "南投縣-01",
+   "plan_date": "2014-03-31"
+  },
+  "L0002_02": {
+   "name": "南投縣-02",
+   "plan_date": "2014-12-31"
+  },
+  "L0003": {
+   "name": "臺中市",
+   "plan_date": "2014-12-22"
+  },
+  "L0004": {
+   "name": "嘉義縣市",
+   "plan_date": "2022-12-26"
+  },
+  "L0005": {
+   "name": "臺南市",
+   "plan_date": "2021-07-06"
+  },
+  "L0006": {
+   "name": "高雄市",
+   "plan_date": "2022-12-26"
+  },
+  "L0007": {
+   "name": "新北市",
+   "plan_date": "2025-05-29"
+  },
+  "L0008": {
+   "name": "基隆市",
+   "plan_date": "2025-05-29"
+  },
+  "L0009": {
+   "name": "屏東縣",
+   "plan_date": "2015-11-23"
+  },
+  "L0010": {
+   "name": "臺東縣",
+   "plan_date": "2015-11-23"
+  },
+  "L0011": {
+   "name": "桃園市",
+   "plan_date": "2015-12-31"
+  },
+  "L0012": {
+   "name": "新竹縣市",
+   "plan_date": "2015-12-31"
+  },
+  "L0013": {
+   "name": "苗栗縣",
+   "plan_date": "2015-12-31"
+  },
+  "L0014": {
+   "name": "彰化縣",
+   "plan_date": "2016-08-29"
+  },
+  "L0015": {
+   "name": "雲林縣",
+   "plan_date": "2016-08-29"
+  },
+  "L0016": {
+   "name": "宜蘭縣",
+   "plan_date": "2016-08-29"
+  },
+  "L0017": {
+   "name": "花蓮縣",
+   "plan_date": "2016-08-29"
+  }
+ },
+ "zone_lookup": {
+  "inside_points": 9563,
+  "outside_rows_le39.5_median_dist_to_nearest_inside_m": 735.3,
+  "outside_rows_le39.5_p90_dist_m": 1680.6
+ },
+ "legacy_cases_le39.5": {
+  "n": 1410,
+  "outside": 584,
+  "outside_share": 0.4142,
+  "outside_by_component": {
+   "disturbance_without_catalogue_scar": 221,
+   "older_scar_within_50m_polygon_not_containing_point": 200,
+   "scar_newer_than_zone_plan": 144,
+   "older_scar_polygon_contains_point": 19
+  },
+  "outside_share_by_component": {
+   "disturbance_without_catalogue_scar": 0.3784,
+   "older_scar_within_50m_polygon_not_containing_point": 0.3425,
+   "scar_newer_than_zone_plan": 0.2466,
+   "older_scar_polygon_contains_point": 0.0325
+  },
+  "inside_by_component": {
+   "older_scar_within_50m_polygon_not_containing_point": 344,
+   "disturbance_without_catalogue_scar": 205,
+   "older_scar_polygon_contains_point": 194,
+   "scar_newer_than_zone_plan": 83
+  },
+  "v1_to_v2_moved_from_contains_point_to_newer": 10
+ },
+ "legacy_cases_le39.5_main_definition": {
+  "n": 1574,
+  "outside": 676,
+  "outside_by_class": {
+   "class1": 157,
+   "class2": 354,
+   "class3": 165
+  },
+  "inside_by_class": {
+   "class1": 252,
+   "class2": 487,
+   "class3": 159
+  },
+  "outside_class2_with_catalogue_scar": 206,
+  "outside_class2_without_catalogue_scar": 148
+ },
+ "coverage_by_plan_phase_le39.5": {
+  "plan_2014_2016": {
+   "cases": 2213,
+   "cases_inside_share": 0.3552,
+   "control_rows": 11701,
+   "control_rows_inside_share": 0.1114,
+   "legacy_cases": 1000,
+   "legacy_cases_outside_share": 0.484,
+   "zones": [
+    "L0002_01",
+    "L0002_02",
+    "L0003",
+    "L0009",
+    "L0010",
+    "L0011",
+    "L0012",
+    "L0013",
+    "L0014",
+    "L0015",
+    "L0016",
+    "L0017"
+   ]
+  },
+  "plan_2021_2025": {
+   "cases": 678,
+   "cases_inside_share": 0.6298,
+   "control_rows": 2904,
+   "control_rows_inside_share": 0.2225,
+   "legacy_cases": 410,
+   "legacy_cases_outside_share": 0.2439,
+   "zones": [
+    "L0001",
+    "L0004",
+    "L0005",
+    "L0006",
+    "L0007"
+   ]
+  }
+ },
+ "zones_changed_2021_2025": {
+  "in_list": [
+   "L0001",
+   "L0004",
+   "L0005",
+   "L0006",
+   "L0007",
+   "L0008"
+  ],
+  "n_in_list": 6,
+  "with_sample_points_le39.5": [
+   "L0001",
+   "L0004",
+   "L0005",
+   "L0006",
+   "L0007"
+  ],
+  "without_sample_points_le39.5": [
+   "L0008"
+  ]
+ },
+ "screening_le39.5": {
+  "all_zones": {
+   "gsa": {
+    "cases_flagged_share": 0.4196,
+    "control_rows_flagged_share": 0.1334
+   },
+   "legacy": {
+    "cases_flagged_share": 0.4877,
+    "control_rows_flagged_share": 0.1497
+   },
+   "either": {
+    "cases_flagged_share": 0.6216,
+    "control_rows_flagged_share": 0.2338
+   },
+   "both": {
+    "cases_flagged_share": 0.2857,
+    "control_rows_flagged_share": 0.0494
+   },
+   "legacy_outside_gsa": {
+    "cases_flagged_share": 0.202,
+    "control_rows_flagged_share": 0.1004
+   },
+   "n_cases": 2891,
+   "n_control_rows": 14605
+  },
+  "plan_2014_2016_zones": {
+   "gsa": {
+    "cases_flagged_share": 0.3552,
+    "control_rows_flagged_share": 0.1114
+   },
+   "legacy": {
+    "cases_flagged_share": 0.4519,
+    "control_rows_flagged_share": 0.143
+   },
+   "either": {
+    "cases_flagged_share": 0.5739,
+    "control_rows_flagged_share": 0.2094
+   },
+   "both": {
+    "cases_flagged_share": 0.2332,
+    "control_rows_flagged_share": 0.045
+   },
+   "legacy_outside_gsa": {
+    "cases_flagged_share": 0.2187,
+    "control_rows_flagged_share": 0.098
+   },
+   "n_cases": 2213,
+   "n_control_rows": 11701
+  }
+ }
+}

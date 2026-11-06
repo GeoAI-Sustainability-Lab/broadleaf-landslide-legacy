@@ -1,0 +1,27 @@
+{
+ "note": "rep_2009 group, R1 rows with scar_age >= 5 yr; counts in the fitted rows (events with case-control variation) and in all rows",
+ "all": {
+  "all_rows": {
+   "cases": 0,
+   "control_rows": 2,
+   "max_scar_age_controls": 5.125256673511293
+  },
+  "fitted_rows": {
+   "cases": 0,
+   "control_rows": 2,
+   "max_scar_age_controls": 5.125256673511293
+  }
+ },
+ "le39.5": {
+  "all_rows": {
+   "cases": 0,
+   "control_rows": 1,
+   "max_scar_age_controls": 5.125256673511293
+  },
+  "fitted_rows": {
+   "cases": 0,
+   "control_rows": 1,
+   "max_scar_age_controls": 5.125256673511293
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "labels": {
+  "points_labelled": 33104,
+  "boundary_points_multiple_polygons": 148,
+  "rule": "lowest record index"
+ },
+ "cases_flow": {
+  "polygons_2009_2017": 19869,
+  "after_relisting_excluded": 19844,
+  "after_missing_cutoff_excluded": 18690,
+  "in_six_forest_types": 9005,
+  "broadleaf_cases_rows": 6033
+ },
+ "controls_flow": {
+  "candidates": 80000,
+  "with_land_dem": 38085,
+  "in_six_forest_types": 23135,
+  "broadleaf_points": 15588,
+  "broadleaf_points_in_any_footprint": 12861
+ },
+ "terrain_missing_points": {
+  "case": 0,
+  "control": 0
+ },
+ "control_rows_inside_event_polygons": 147,
+ "rows": {
+  "events_with_cutoff": 100,
+  "rows_all_types": 117020,
+  "cases_all_types": 9005,
+  "broadleaf_rows": 76553,
+  "broadleaf_cases": 6033,
+  "broadleaf_control_rows": 70520,
+  "broadleaf_control_points": 12861,
+  "broadleaf_cases_le39.5": 3205,
+  "broadleaf_control_rows_le39.5": 45857,
+  "R1_share_cases": 0.2001,
+  "R1_share_controls": 0.056
+ },
+ "lt_pairs": {
+  "pairs": 58810,
+  "by_cutoff_year": {
+   "2008": 12836,
+   "2009": 4930,
+   "2010": 2680,
+   "2011": 1964,
+   "2012": 5785,
+   "2013": 4986,
+   "2014": 3310,
+   "2015": 6689,
+   "2016": 9350,
+   "2017": 6280
+  }
+ },
+ "note_v1_1": "controls_flow.broadleaf_points and broadleaf_points_in_any_footprint added 2026-10-10 from rep_points_v1.csv and rep_rows_v1.csv (no change to the sample)",
+ "independence_check": {
+  "replication_points": 32140,
+  "main_points": 17928,
+  "min_distance_to_main_m": 1.99,
+  "within_1m": 0,
+  "within_20m": 99
+ },
+ "forest_type_map": {
+  "records": 583332,
+  "parsed_candidates": 43407,
+  "matches": 33253
+ }
+}
