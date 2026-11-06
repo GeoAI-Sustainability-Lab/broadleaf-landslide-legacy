@@ -1,0 +1,20 @@
+{
+ "island_rows": 20585,
+ "event_rows": 40559,
+ "event_cases": 7454,
+ "event_control_rows": 33105,
+ "broadleaf_cases_class1_0m": 472,
+ "broadleaf_controls_class1_0m": 54,
+ "broadleaf_cases_bare0": 209,
+ "broadleaf_controls_bare0": 34,
+ "old_scar_vs_inside_2004_2017_crosstab": {
+  "0": {
+   "false": 6852,
+   "true": 0
+  },
+  "1": {
+   "false": 0,
+   "true": 602
+  }
+ }
+}

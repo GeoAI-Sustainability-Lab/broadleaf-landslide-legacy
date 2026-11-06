@@ -1,0 +1,33 @@
+{
+ "elev": {
+  "r": 1.0,
+  "median_abs_diff": 0.0,
+  "share_equal_1e-3": 0.9969
+ },
+ "slope": {
+  "r": 0.99937,
+  "median_abs_diff": 2e-06,
+  "share_equal_1e-3": 0.9967
+ },
+ "north": {
+  "r": 0.99978,
+  "median_abs_diff": 0.0,
+  "share_equal_1e-3": 0.9968
+ },
+ "east": {
+  "r": 0.99983,
+  "median_abs_diff": 0.0,
+  "share_equal_1e-3": 0.9968
+ },
+ "planc": {
+  "r": 0.99856,
+  "median_abs_diff": 0.0,
+  "share_equal_1e-3": 0.997
+ },
+ "profc": {
+  "r": 0.99884,
+  "median_abs_diff": 0.0,
+  "share_equal_1e-3": 0.997
+ },
+ "n_points": 17928
+}

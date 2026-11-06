@@ -1,0 +1,517 @@
+{
+ "n_points": 20585,
+ "point_years": 761645,
+ "share_point_years_0": 0.58,
+ "share_point_years_lt3": 6.19,
+ "median_obs_by_year": {
+  "1988": 4.0,
+  "1989": 6.0,
+  "1990": 5.0,
+  "1991": 7.0,
+  "1992": 6.0,
+  "1993": 4.0,
+  "1994": 6.0,
+  "1995": 7.0,
+  "1996": 7.0,
+  "1997": 4.0,
+  "1998": 3.0,
+  "1999": 6.0,
+  "2000": 11.0,
+  "2001": 10.0,
+  "2002": 9.0,
+  "2003": 10.0,
+  "2004": 11.0,
+  "2005": 10.0,
+  "2006": 9.0,
+  "2007": 7.0,
+  "2008": 12.0,
+  "2009": 11.0,
+  "2010": 4.0,
+  "2011": 6.0,
+  "2012": 4.0,
+  "2013": 9.0,
+  "2014": 10.0,
+  "2015": 11.0,
+  "2016": 11.0,
+  "2017": 12.0,
+  "2018": 10.0,
+  "2019": 11.0,
+  "2020": 12.0,
+  "2021": 13.0,
+  "2022": 18.0,
+  "2023": 16.0,
+  "2024": 11.0
+ },
+ "median_s2_by_year": {
+  "2017": 0.0,
+  "2018": 1.0,
+  "2019": 24.0,
+  "2020": 29.0,
+  "2021": 26.0,
+  "2022": 25.0,
+  "2023": 20.0,
+  "2024": 23.0,
+  "2025": 31.0
+ },
+ "by_aspect": [
+  {
+   "asp": "EW",
+   "n": 6561,
+   "obs_mean": 9.59,
+   "years_lt3": 2.26,
+   "years_0": 0.21,
+   "s2_mean": 28.66
+  },
+  {
+   "asp": "N",
+   "n": 8028,
+   "obs_mean": 9.47,
+   "years_lt3": 2.35,
+   "years_0": 0.22,
+   "s2_mean": 27.56
+  },
+  {
+   "asp": "S",
+   "n": 5996,
+   "obs_mean": 9.63,
+   "years_lt3": 2.23,
+   "years_0": 0.21,
+   "s2_mean": 29.99
+  }
+ ],
+ "by_slope_band": [
+  {
+   "band": "<10",
+   "n": 522,
+   "obs_mean": 11.06,
+   "years_lt3": 2.17,
+   "years_0": 0.34,
+   "s2_mean": 29.97
+  },
+  {
+   "band": "10-20",
+   "n": 1747,
+   "obs_mean": 10.25,
+   "years_lt3": 2.24,
+   "years_0": 0.2,
+   "s2_mean": 28.02
+  },
+  {
+   "band": "20-30",
+   "n": 4328,
+   "obs_mean": 9.8,
+   "years_lt3": 2.26,
+   "years_0": 0.22,
+   "s2_mean": 28.76
+  },
+  {
+   "band": "30-39.5",
+   "n": 6526,
+   "obs_mean": 9.49,
+   "years_lt3": 2.29,
+   "years_0": 0.22,
+   "s2_mean": 28.63
+  },
+  {
+   "band": ">=39.5",
+   "n": 7462,
+   "obs_mean": 9.2,
+   "years_lt3": 2.33,
+   "years_0": 0.2,
+   "s2_mean": 28.58
+  }
+ ],
+ "by_elevation": [
+  {
+   "elevband": "<500",
+   "n": 4947,
+   "obs_mean": 11.3,
+   "years_lt3": 1.57,
+   "years_0": 0.13,
+   "s2_mean": 29.09
+  },
+  {
+   "elevband": "500-1000",
+   "n": 5123,
+   "obs_mean": 9.81,
+   "years_lt3": 2.29,
+   "years_0": 0.27,
+   "s2_mean": 28.09
+  },
+  {
+   "elevband": "1000-1500",
+   "n": 4117,
+   "obs_mean": 9.08,
+   "years_lt3": 2.65,
+   "years_0": 0.31,
+   "s2_mean": 27.01
+  },
+  {
+   "elevband": ">1500",
+   "n": 6392,
+   "obs_mean": 8.31,
+   "years_lt3": 2.62,
+   "years_0": 0.18,
+   "s2_mean": 29.71
+  }
+ ],
+ "by_kind": [
+  {
+   "kind": "case",
+   "n": 7454,
+   "obs_mean": 10.16,
+   "years_lt3": 1.73,
+   "years_0": 0.12,
+   "s2_mean": 28.94
+  },
+  {
+   "kind": "control",
+   "n": 13131,
+   "obs_mean": 9.21,
+   "years_lt3": 2.6,
+   "years_0": 0.27,
+   "s2_mean": 28.44
+  }
+ ],
+ "by_forest_type": [
+  {
+   "ft": "待成林地",
+   "n": 660,
+   "obs_mean": 10.54,
+   "years_lt3": 1.71,
+   "years_0": 0.18,
+   "s2_mean": 30.73
+  },
+  {
+   "ft": "竹林",
+   "n": 834,
+   "obs_mean": 12.98,
+   "years_lt3": 0.76,
+   "years_0": 0.07,
+   "s2_mean": 33.88
+  },
+  {
+   "ft": "竹闊混淆林",
+   "n": 876,
+   "obs_mean": 14.2,
+   "years_lt3": 0.51,
+   "years_0": 0.03,
+   "s2_mean": 36.55
+  },
+  {
+   "ft": "針葉樹林型",
+   "n": 2269,
+   "obs_mean": 7.91,
+   "years_lt3": 2.78,
+   "years_0": 0.2,
+   "s2_mean": 28.48
+  },
+  {
+   "ft": "針闊葉樹混淆",
+   "n": 1500,
+   "obs_mean": 8.27,
+   "years_lt3": 2.95,
+   "years_0": 0.27,
+   "s2_mean": 27.64
+  },
+  {
+   "ft": "闊葉樹林型",
+   "n": 14446,
+   "obs_mean": 9.42,
+   "years_lt3": 2.37,
+   "years_0": 0.23,
+   "s2_mean": 27.87
+  }
+ ],
+ "by_band_aspect": [
+  {
+   "band": "<10",
+   "asp": "EW",
+   "n": 147,
+   "obs_mean": 11.55,
+   "years_lt3": 1.58,
+   "years_0": 0.14,
+   "s2_mean": 30.5
+  },
+  {
+   "band": "<10",
+   "asp": "N",
+   "n": 174,
+   "obs_mean": 11.14,
+   "years_lt3": 1.9,
+   "years_0": 0.16,
+   "s2_mean": 29.1
+  },
+  {
+   "band": "<10",
+   "asp": "S",
+   "n": 201,
+   "obs_mean": 10.64,
+   "years_lt3": 2.83,
+   "years_0": 0.66,
+   "s2_mean": 30.32
+  },
+  {
+   "band": "10-20",
+   "asp": "EW",
+   "n": 568,
+   "obs_mean": 10.37,
+   "years_lt3": 2.27,
+   "years_0": 0.2,
+   "s2_mean": 28.01
+  },
+  {
+   "band": "10-20",
+   "asp": "N",
+   "n": 610,
+   "obs_mean": 9.99,
+   "years_lt3": 2.36,
+   "years_0": 0.23,
+   "s2_mean": 26.94
+  },
+  {
+   "band": "10-20",
+   "asp": "S",
+   "n": 569,
+   "obs_mean": 10.4,
+   "years_lt3": 2.07,
+   "years_0": 0.18,
+   "s2_mean": 29.2
+  },
+  {
+   "band": "20-30",
+   "asp": "EW",
+   "n": 1359,
+   "obs_mean": 9.63,
+   "years_lt3": 2.32,
+   "years_0": 0.23,
+   "s2_mean": 28.46
+  },
+  {
+   "band": "20-30",
+   "asp": "N",
+   "n": 1643,
+   "obs_mean": 9.94,
+   "years_lt3": 2.1,
+   "years_0": 0.21,
+   "s2_mean": 28.59
+  },
+  {
+   "band": "20-30",
+   "asp": "S",
+   "n": 1326,
+   "obs_mean": 9.79,
+   "years_lt3": 2.38,
+   "years_0": 0.23,
+   "s2_mean": 29.27
+  },
+  {
+   "band": "30-39.5",
+   "asp": "EW",
+   "n": 2011,
+   "obs_mean": 9.5,
+   "years_lt3": 2.31,
+   "years_0": 0.22,
+   "s2_mean": 28.35
+  },
+  {
+   "band": "30-39.5",
+   "asp": "N",
+   "n": 2597,
+   "obs_mean": 9.53,
+   "years_lt3": 2.33,
+   "years_0": 0.24,
+   "s2_mean": 27.92
+  },
+  {
+   "band": "30-39.5",
+   "asp": "S",
+   "n": 1918,
+   "obs_mean": 9.42,
+   "years_lt3": 2.22,
+   "years_0": 0.19,
+   "s2_mean": 29.9
+  },
+  {
+   "band": ">=39.5",
+   "asp": "EW",
+   "n": 2476,
+   "obs_mean": 9.34,
+   "years_lt3": 2.22,
+   "years_0": 0.2,
+   "s2_mean": 29.07
+  },
+  {
+   "band": ">=39.5",
+   "asp": "N",
+   "n": 3004,
+   "obs_mean": 8.96,
+   "years_lt3": 2.54,
+   "years_0": 0.21,
+   "s2_mean": 26.73
+  },
+  {
+   "band": ">=39.5",
+   "asp": "S",
+   "n": 1982,
+   "obs_mean": 9.41,
+   "years_lt3": 2.13,
+   "years_0": 0.18,
+   "s2_mean": 30.77
+  }
+ ],
+ "by_kind_aspect": [
+  {
+   "kind": "case",
+   "asp": "EW",
+   "n": 2388,
+   "obs_mean": 10.22,
+   "years_lt3": 1.63,
+   "years_0": 0.11,
+   "s2_mean": 29.14
+  },
+  {
+   "kind": "case",
+   "asp": "N",
+   "n": 3504,
+   "obs_mean": 9.92,
+   "years_lt3": 1.93,
+   "years_0": 0.15,
+   "s2_mean": 27.5
+  },
+  {
+   "kind": "case",
+   "asp": "S",
+   "n": 1562,
+   "obs_mean": 10.63,
+   "years_lt3": 1.46,
+   "years_0": 0.09,
+   "s2_mean": 31.88
+  },
+  {
+   "kind": "control",
+   "asp": "EW",
+   "n": 4173,
+   "obs_mean": 9.23,
+   "years_lt3": 2.62,
+   "years_0": 0.27,
+   "s2_mean": 28.39
+  },
+  {
+   "kind": "control",
+   "asp": "N",
+   "n": 4524,
+   "obs_mean": 9.12,
+   "years_lt3": 2.69,
+   "years_0": 0.28,
+   "s2_mean": 27.61
+  },
+  {
+   "kind": "control",
+   "asp": "S",
+   "n": 4434,
+   "obs_mean": 9.28,
+   "years_lt3": 2.5,
+   "years_0": 0.25,
+   "s2_mean": 29.33
+  }
+ ],
+ "broadleaf_bamboo_by_kind_asp": [
+  {
+   "ft": "竹林",
+   "kind": "case",
+   "asp": "EW",
+   "n": 50,
+   "obs_mean": 14.03,
+   "years_lt3": 0.24
+  },
+  {
+   "ft": "竹林",
+   "kind": "case",
+   "asp": "N",
+   "n": 88,
+   "obs_mean": 13.98,
+   "years_lt3": 0.42
+  },
+  {
+   "ft": "竹林",
+   "kind": "case",
+   "asp": "S",
+   "n": 33,
+   "obs_mean": 13.37,
+   "years_lt3": 0.45
+  },
+  {
+   "ft": "竹林",
+   "kind": "control",
+   "asp": "EW",
+   "n": 213,
+   "obs_mean": 12.24,
+   "years_lt3": 0.95
+  },
+  {
+   "ft": "竹林",
+   "kind": "control",
+   "asp": "N",
+   "n": 220,
+   "obs_mean": 12.4,
+   "years_lt3": 0.87
+  },
+  {
+   "ft": "竹林",
+   "kind": "control",
+   "asp": "S",
+   "n": 230,
+   "obs_mean": 13.55,
+   "years_lt3": 0.75
+  },
+  {
+   "ft": "闊葉樹林型",
+   "kind": "case",
+   "asp": "EW",
+   "n": 1851,
+   "obs_mean": 10.03,
+   "years_lt3": 1.66
+  },
+  {
+   "ft": "闊葉樹林型",
+   "kind": "case",
+   "asp": "N",
+   "n": 2739,
+   "obs_mean": 9.72,
+   "years_lt3": 1.95
+  },
+  {
+   "ft": "闊葉樹林型",
+   "kind": "case",
+   "asp": "S",
+   "n": 1154,
+   "obs_mean": 10.44,
+   "years_lt3": 1.48
+  },
+  {
+   "ft": "闊葉樹林型",
+   "kind": "control",
+   "asp": "EW",
+   "n": 2789,
+   "obs_mean": 9.05,
+   "years_lt3": 2.82
+  },
+  {
+   "ft": "闊葉樹林型",
+   "kind": "control",
+   "asp": "N",
+   "n": 2980,
+   "obs_mean": 8.98,
+   "years_lt3": 2.92
+  },
+  {
+   "ft": "闊葉樹林型",
+   "kind": "control",
+   "asp": "S",
+   "n": 2933,
+   "obs_mean": 9.16,
+   "years_lt3": 2.57
+  }
+ ]
+}

@@ -1,0 +1,557 @@
+{
+ "attributable_fraction": {
+  "event_all_slopes": {
+   "n_cases": 5744,
+   "rho_cases_by_class": {
+    "0": 0.4772,
+    "1": 0.1455,
+    "2": 0.2648,
+    "3": 0.1125
+   },
+   "OR": {
+    "sc1": 4.072,
+    "sc2": 10.565,
+    "sc3": 2.442
+   },
+   "AF_1": {
+    "point": 0.1098,
+    "ci_mc": [
+     0.1009,
+     0.1184
+    ]
+   },
+   "AF_2": {
+    "point": 0.2397,
+    "ci_mc": [
+     0.2285,
+     0.2503
+    ]
+   },
+   "AF_3": {
+    "point": 0.0664,
+    "ci_mc": [
+     0.0583,
+     0.0742
+    ]
+   },
+   "AF_total": {
+    "point": 0.416,
+    "ci_mc": [
+     0.4006,
+     0.43
+    ]
+   }
+  },
+  "event_le39.5": {
+   "n_cases": 2891,
+   "rho_cases_by_class": {
+    "0": 0.4556,
+    "1": 0.1415,
+    "2": 0.2909,
+    "3": 0.1121
+   },
+   "OR": {
+    "sc1": 4.777,
+    "sc2": 16.878,
+    "sc3": 2.649
+   },
+   "AF_1": {
+    "point": 0.1119,
+    "ci_mc": [
+     0.0995,
+     0.1239
+    ]
+   },
+   "AF_2": {
+    "point": 0.2737,
+    "ci_mc": [
+     0.258,
+     0.2902
+    ]
+   },
+   "AF_3": {
+    "point": 0.0698,
+    "ci_mc": [
+     0.0591,
+     0.0804
+    ]
+   },
+   "AF_total": {
+    "point": 0.4553,
+    "ci_mc": [
+     0.4347,
+     0.4742
+    ]
+   }
+  },
+  "island_all_slopes": {
+   "n_cases": 5744,
+   "rho_cases_by_class": {
+    "0": 0.4772,
+    "1": 0.1455,
+    "2": 0.2648,
+    "3": 0.1125
+   },
+   "OR": {
+    "sc1": 5.851,
+    "sc2": 13.126,
+    "sc3": 2.421
+   },
+   "AF_1": {
+    "point": 0.1207,
+    "ci_mc": [
+     0.1005,
+     0.134
+    ]
+   },
+   "AF_2": {
+    "point": 0.2446,
+    "ci_mc": [
+     0.2288,
+     0.2587
+    ]
+   },
+   "AF_3": {
+    "point": 0.066,
+    "ci_mc": [
+     0.0532,
+     0.0772
+    ]
+   },
+   "AF_total": {
+    "point": 0.4313,
+    "ci_mc": [
+     0.3904,
+     0.4612
+    ]
+   }
+  },
+  "island_le39.5": {
+   "n_cases": 2891,
+   "rho_cases_by_class": {
+    "0": 0.4556,
+    "1": 0.1415,
+    "2": 0.2909,
+    "3": 0.1121
+   },
+   "OR": {
+    "sc1": 7.499,
+    "sc2": 20.706,
+    "sc3": 2.595
+   },
+   "AF_1": {
+    "point": 0.1226,
+    "ci_mc": [
+     0.102,
+     0.1374
+    ]
+   },
+   "AF_2": {
+    "point": 0.2769,
+    "ci_mc": [
+     0.2579,
+     0.2931
+    ]
+   },
+   "AF_3": {
+    "point": 0.0689,
+    "ci_mc": [
+     0.0548,
+     0.0812
+    ]
+   },
+   "AF_total": {
+    "point": 0.4684,
+    "ci_mc": [
+     0.4291,
+     0.4965
+    ]
+   }
+  }
+ },
+ "events": {
+  "n_events": 39,
+  "events_lt5_cases": 8,
+  "events_lt10_cases": 17,
+  "min_controls_per_event": 4,
+  "cases_in_events_lt5": 16,
+  "cases_in_events_lt10": 75
+ },
+ "reference_event": {
+  "sc1": {
+   "OR": 4.0724,
+   "ci_cluster": [
+    3.4854,
+    4.7583
+   ]
+  },
+  "sc2": {
+   "OR": 10.5655,
+   "ci_cluster": [
+    9.0821,
+    12.2912
+   ]
+  },
+  "sc3": {
+   "OR": 2.442,
+   "ci_cluster": [
+    2.1292,
+    2.8008
+   ]
+  },
+  "legacy_x_slope": {
+   "OR": 0.9786,
+   "ci_cluster": [
+    0.97,
+    0.9873
+   ]
+  },
+  "legacy_OR_20": {
+   "OR": 7.3312,
+   "ci_cluster": [
+    6.1219,
+    8.7793
+   ]
+  },
+  "legacy_OR_40": {
+   "OR": 4.756,
+   "ci_cluster": [
+    4.3133,
+    5.2442
+   ]
+  },
+  "H4_class0_OR20": {
+   "OR": 0.9722,
+   "ci_cluster": [
+    0.6576,
+    1.4373
+   ]
+  },
+  "H4_interaction": {
+   "OR": 1.0266,
+   "ci_cluster": [
+    0.9996,
+    1.0543
+   ]
+  },
+  "H4_full_OR20": {
+   "OR": 0.4917,
+   "ci_cluster": [
+    0.3369,
+    0.7175
+   ]
+  }
+ },
+ "leave_one_event_out": {
+  "OR_sc1": {
+   "min": 3.2522,
+   "max": 4.4998,
+   "event_min": "凱米颱風",
+   "event_max": "卡努颱風"
+  },
+  "OR_sc2": {
+   "min": 9.559,
+   "max": 11.9252,
+   "event_min": "0728豪雨",
+   "event_max": "卡努颱風"
+  },
+  "OR_sc3": {
+   "min": 2.265,
+   "max": 2.5354,
+   "event_min": "康芮颱風",
+   "event_max": "卡努颱風"
+  },
+  "legacy_x_slope": {
+   "min": 0.9746,
+   "max": 0.9836,
+   "event_min": "山陀兒颱風",
+   "event_max": "凱米颱風"
+  },
+  "legacy_OR_20": {
+   "min": 6.0252,
+   "max": 8.3962,
+   "event_min": "凱米颱風",
+   "event_max": "卡努颱風"
+  },
+  "H4_class0_OR20": {
+   "min": 0.9037,
+   "max": 1.1089,
+   "event_min": "1020豪雨",
+   "event_max": "卡努颱風"
+  },
+  "H4_full_OR20": {
+   "min": 0.4547,
+   "max": 0.5382,
+   "event_min": "1020豪雨",
+   "event_max": "0731豪雨暨盧碧颱風"
+  }
+ },
+ "small_event_sensitivity": {
+  "events_with_ge5_cases": {
+   "n_events": 31,
+   "sc1": {
+    "OR": 4.0675,
+    "ci_cluster": [
+     3.4811,
+     4.7526
+    ]
+   },
+   "sc2": {
+    "OR": 10.5456,
+    "ci_cluster": [
+     9.064,
+     12.2694
+    ]
+   },
+   "sc3": {
+    "OR": 2.4417,
+    "ci_cluster": [
+     2.1287,
+     2.8007
+    ]
+   },
+   "legacy_x_slope": {
+    "OR": 0.9787,
+    "ci_cluster": [
+     0.9701,
+     0.9874
+    ]
+   },
+   "legacy_OR_20": {
+    "OR": 7.3074,
+    "ci_cluster": [
+     6.1011,
+     8.7523
+    ]
+   },
+   "legacy_OR_40": {
+    "OR": 4.75,
+    "ci_cluster": [
+     4.3078,
+     5.2377
+    ]
+   },
+   "H4_class0_OR20": {
+    "OR": 0.9711,
+    "ci_cluster": [
+     0.6567,
+     1.4359
+    ]
+   },
+   "H4_interaction": {
+    "OR": 1.0266,
+    "ci_cluster": [
+     0.9996,
+     1.0543
+    ]
+   },
+   "H4_full_OR20": {
+    "OR": 0.491,
+    "ci_cluster": [
+     0.3364,
+     0.7165
+    ]
+   }
+  },
+  "events_with_ge10_cases": {
+   "n_events": 22,
+   "sc1": {
+    "OR": 4.1052,
+    "ci_cluster": [
+     3.5119,
+     4.7989
+    ]
+   },
+   "sc2": {
+    "OR": 10.5212,
+    "ci_cluster": [
+     9.033,
+     12.2545
+    ]
+   },
+   "sc3": {
+    "OR": 2.4653,
+    "ci_cluster": [
+     2.1479,
+     2.8295
+    ]
+   },
+   "legacy_x_slope": {
+    "OR": 0.9785,
+    "ci_cluster": [
+     0.9699,
+     0.9873
+    ]
+   },
+   "legacy_OR_20": {
+    "OR": 7.3506,
+    "ci_cluster": [
+     6.1321,
+     8.8112
+    ]
+   },
+   "legacy_OR_40": {
+    "OR": 4.7637,
+    "ci_cluster": [
+     4.3185,
+     5.2548
+    ]
+   },
+   "H4_class0_OR20": {
+    "OR": 0.8414,
+    "ci_cluster": [
+     0.5578,
+     1.2692
+    ]
+   },
+   "H4_interaction": {
+    "OR": 1.0346,
+    "ci_cluster": [
+     1.0062,
+     1.0638
+    ]
+   },
+   "H4_full_OR20": {
+    "OR": 0.4241,
+    "ci_cluster": [
+     0.2856,
+     0.6297
+    ]
+   }
+  }
+ },
+ "spatial_block_cv_20km": {
+  "n_blocks": 111,
+  "folds": [
+   {
+    "fold": 0,
+    "n_test": 2952,
+    "cases_test": 1429,
+    "auc_terrain": 0.6984,
+    "auc_terrain_legacy": 0.7464,
+    "OR_sc_train": [
+     7.153,
+     16.968,
+     2.508
+    ]
+   },
+   {
+    "fold": 1,
+    "n_test": 2123,
+    "cases_test": 685,
+    "auc_terrain": 0.7276,
+    "auc_terrain_legacy": 0.8252,
+    "OR_sc_train": [
+     5.6,
+     12.195,
+     2.499
+    ]
+   },
+   {
+    "fold": 2,
+    "n_test": 2702,
+    "cases_test": 945,
+    "auc_terrain": 0.7041,
+    "auc_terrain_legacy": 0.7928,
+    "OR_sc_train": [
+     6.014,
+     13.404,
+     2.43
+    ]
+   },
+   {
+    "fold": 3,
+    "n_test": 3120,
+    "cases_test": 1238,
+    "auc_terrain": 0.6881,
+    "auc_terrain_legacy": 0.8159,
+    "OR_sc_train": [
+     5.54,
+     11.436,
+     2.374
+    ]
+   },
+   {
+    "fold": 4,
+    "n_test": 3549,
+    "cases_test": 1447,
+    "auc_terrain": 0.7357,
+    "auc_terrain_legacy": 0.8247,
+    "OR_sc_train": [
+     5.277,
+     12.886,
+     2.326
+    ]
+   }
+  ],
+  "auc_terrain_mean": 0.7108,
+  "auc_terrain_legacy_mean": 0.801,
+  "event_leave_fold_out": [
+   {
+    "fold": 0,
+    "OR_sc1": 4.3503,
+    "OR_sc2": 12.2535,
+    "OR_sc3": 2.5561,
+    "legacy_x_slope": 0.9758,
+    "H4_class0_OR20": 1.2864
+   },
+   {
+    "fold": 1,
+    "OR_sc1": 4.1887,
+    "OR_sc2": 10.3508,
+    "OR_sc3": 2.4811,
+    "legacy_x_slope": 0.9815,
+    "H4_class0_OR20": 0.8616
+   },
+   {
+    "fold": 2,
+    "OR_sc1": 4.4541,
+    "OR_sc2": 10.9536,
+    "OR_sc3": 2.4224,
+    "legacy_x_slope": 0.9765,
+    "H4_class0_OR20": 0.719
+   },
+   {
+    "fold": 3,
+    "OR_sc1": 3.9735,
+    "OR_sc2": 10.2609,
+    "OR_sc3": 2.5402,
+    "legacy_x_slope": 0.9798,
+    "H4_class0_OR20": 0.9688
+   },
+   {
+    "fold": 4,
+    "OR_sc1": 3.6034,
+    "OR_sc2": 10.1349,
+    "OR_sc3": 2.2979,
+    "legacy_x_slope": 0.9786,
+    "H4_class0_OR20": 1.1422
+   }
+  ]
+ },
+ "specification_curve": {
+  "n_specs": 72,
+  "OR_sc1_range": [
+   2.9464,
+   22.477
+  ],
+  "OR_sc2_range": [
+   8.1665,
+   23.3278
+  ],
+  "OR_sc3_range": [
+   1.9407,
+   4.0494
+  ],
+  "share_sc3_lower_ci_gt1": 1.0,
+  "H4_class0_OR20_range": [
+   0.5324,
+   1.3935
+  ],
+  "share_H4_ci_includes_1": 1.0,
+  "H4_class0_OR20_event_range": [
+   0.6927,
+   1.3935
+  ]
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "label": "descriptive, added after M8 (not in the charter): share of rows in class 3 with <= 10 years since the disturbance, by stand origin",
+ "source_script": "stand_origin_class3_recent_v1.py",
+ "all": {
+  "primary": {
+   "n_control_rows": 15393,
+   "n_cases": 3821,
+   "class3_le10yr_share_controls": 0.0113,
+   "class3_le10yr_share_cases": 0.0322,
+   "class3_share_controls": 0.0625,
+   "class3_tsd_bins_controls": {
+    "0-5": 84,
+    "5-10": 90,
+    "10-20": 303,
+    "20+": 485
+   }
+  },
+  "modified": {
+   "n_control_rows": 5127,
+   "n_cases": 1539,
+   "class3_le10yr_share_controls": 0.0172,
+   "class3_le10yr_share_cases": 0.0331,
+   "class3_share_controls": 0.1188,
+   "class3_tsd_bins_controls": {
+    "0-5": 44,
+    "5-10": 44,
+    "10-20": 146,
+    "20+": 375
+   }
+  },
+  "plantation": {
+   "n_control_rows": 1513,
+   "n_cases": 266,
+   "class3_le10yr_share_controls": 0.0126,
+   "class3_le10yr_share_cases": 0.0338,
+   "class3_share_controls": 0.0747,
+   "class3_tsd_bins_controls": {
+    "0-5": 7,
+    "5-10": 12,
+    "10-20": 29,
+    "20+": 65
+   }
+  }
+ },
+ "le39.5": {
+  "primary": {
+   "n_control_rows": 9318,
+   "n_cases": 1687,
+   "class3_le10yr_share_controls": 0.0098,
+   "class3_le10yr_share_cases": 0.0285,
+   "class3_share_controls": 0.054,
+   "class3_tsd_bins_controls": {
+    "0-5": 35,
+    "5-10": 56,
+    "10-20": 163,
+    "20+": 249
+   }
+  },
+  "modified": {
+   "n_control_rows": 3838,
+   "n_cases": 969,
+   "class3_le10yr_share_controls": 0.0195,
+   "class3_le10yr_share_cases": 0.0361,
+   "class3_share_controls": 0.1199,
+   "class3_tsd_bins_controls": {
+    "0-5": 41,
+    "5-10": 34,
+    "10-20": 125,
+    "20+": 260
+   }
+  },
+  "plantation": {
+   "n_control_rows": 1182,
+   "n_cases": 169,
+   "class3_le10yr_share_controls": 0.0135,
+   "class3_le10yr_share_cases": 0.0237,
+   "class3_share_controls": 0.0736,
+   "class3_tsd_bins_controls": {
+    "0-5": 5,
+    "5-10": 11,
+    "10-20": 27,
+    "20+": 44
+   }
+  }
+ }
+}
