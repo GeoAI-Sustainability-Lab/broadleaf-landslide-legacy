@@ -4,8 +4,9 @@
 Rebuilds the working folder that the stage scripts expect (verify/_work) from the frozen tables in data/frozen, runs the
 stage scripts in their original order and compares every output with the reference registers in registers/.
 
-    python verify/run_verify.py          # quick set, about 5 minutes
-    python verify/run_verify.py --all    # adds the attributable-fraction comparisons (stages/s8), about 40 minutes
+    python verify/run_verify.py          # quick set
+    python verify/run_verify.py --all    # adds the attributable-fraction comparisons (stages/s8) and the event-level
+                                         # bootstrap of stage s9 (2,000 resamples of events; about three hours on two cores)
 
 The stage scripts are stored with the placeholder @WORK@ for the working folder; the runner writes a runnable copy of each
 script into verify/_work with @WORK@ replaced by the absolute path of verify/_work. Checks marked "unrounded" run the stage
@@ -55,10 +56,11 @@ def place(stage, script, dest_dir, unrounded=False, name=None):
     return p
 
 
-def run(path, cwd):
+def run(path, cwd, env=None, tag=""):
     t0 = time.time()
-    r = subprocess.run([sys.executable, path], cwd=os.path.join(W, cwd), capture_output=True, text=True)
-    open(path + ".log", "w", encoding="utf-8").write(r.stdout + "\n--- stderr ---\n" + r.stderr)
+    e = dict(os.environ); e.update(env or {})
+    r = subprocess.run([sys.executable, path], cwd=os.path.join(W, cwd), capture_output=True, text=True, env=e)
+    open(path + tag + ".log", "w", encoding="utf-8").write(r.stdout + "\n--- stderr ---\n" + r.stderr)
     if r.returncode != 0:
         print(r.stderr[-2000:]); raise SystemExit(f"FAILED to run {os.path.relpath(path, W)}")
     return time.time() - t0
@@ -109,11 +111,20 @@ def main(full):
     unpack("lt_segments_all_v1.csv", "v11/unround/g1/lt_segments_all_v1.csv")
     unpack("tags_island_v3.csv", "g1/tags_island_v3.csv", "v11/unround/g1/tags_island_v3.csv")
     unpack("analysis_rows_v1.csv", "g3/analysis_rows_v1.csv")
-    unpack("bright_rows_v1.csv", "v10/an/g3/bright_rows_v1.csv")
+    unpack("bright_rows_v1.csv", "v10/an/g3/bright_rows_v1.csv", "v11/unround/g3/bright_rows_v1.csv")
     unpack("rep_rows_v1.csv", "g5/rep_rows_v1.csv")
     unpack("rep_rows_tagged_v1.csv", "v10/an/g5/rep_rows_tagged_v1.csv", "v11/data/rep_rows_tagged_v1.csv")
     os.makedirs(os.path.join(W, "reference"))
     shutil.copy(os.path.join(REG, "reference_values.json"), os.path.join(W, "reference", "reference_values.json"))
+    for n in ("point_dates_v1.csv", "catalog_matches_within100m_v1.csv", "annual_state_matches_within50m_v1.csv",
+              "control_event_footprint_membership_v1.csv", "lt_summary_v1.csv", "tags_event_v3.csv"):
+        unpack(n, "v27/in/" + n)
+    unpack("zoning_out_v1.csv", "g5/zoning_out_v1.csv")
+    unpack("s2_pairs_v1.csv", "v11/unround/g1/s2_pairs_v1.csv")
+    unpack("rep_rows_tagged_v5.csv", "v27/rep/rep_rows_tagged_v5.csv")
+    for f in ("reference_values_s9.json", "gsa_gap_register_v2.json"): shutil.copy(os.path.join(REG, f), os.path.join(W, "reference", f))
+    os.makedirs(os.path.join(W, "v11/unround/methods"))
+    shutil.copy(os.path.join(REG, "unrounded", "methods_register_v1.json"), os.path.join(W, "v11/unround/methods", "methods_register_v1.json"))
     ok = []
 
     # 1. event-matched tags rebuilt from the matched layers: tags_event_v4.csv must be byte-identical to the frozen table
@@ -157,9 +168,35 @@ def main(full):
     r = subprocess.run([sys.executable, os.path.join(ROOT, "verify", "independent_recompute.py")], capture_output=True, text=True)
     print(r.stdout.rstrip()); ok.append(r.returncode == 0 and "PASS" in r.stdout)
 
+    # 5. stage s9: one cutoff date per event
+    place("s8_attributable_fraction", "afcore_v1.py", "v11/code")
+    place("s3_models", "clr_exact.py", "v10/code")
+    for f in ("tag_event_v5.py", "lib27.py", "an27_main.py", "an27_rep.py", "an27_rep_b2.py", "counts_s9.py"): place("s9_event_cutoff", f, "v27/code")
+    os.makedirs(os.path.join(W, "v27/data"), exist_ok=True); os.makedirs(os.path.join(W, "v27/an"), exist_ok=True)
+    s = run(os.path.join(W, "v27/code/tag_event_v5.py"), "v27/code", {"MODE": "own"}, ".own")
+    print(f"{'PASS':4}  {'tags_event_v4.csv rebuilt by tag_event_v5.py (MODE=own)':58} {'':6}         {'':17}  {s:6.0f} s")
+    s = run(os.path.join(W, "v27/code/tag_event_v5.py"), "v27/code", {"MODE": "common"}, ".common")
+    same = md5_file(os.path.join(W, "v27/data/tags_event_v5.csv")) == MANIFEST["tags_event_v5.csv"]["md5"]
+    print(f"{'PASS' if same else 'FAIL':4}  {'tags_event_v5.csv rebuilt (byte-identical to data/frozen)':58} {'':6}         {'':17}  {s:6.0f} s")
+    ok.append(same)
+    ok.append(compare(os.path.join(W, "v27/data/tag_register_v5_common.json"), "tag_register_v5_common.json", "tag_register_v5_common.json", s))
+    s = run(os.path.join(W, "v27/code/counts_s9.py"), "v27/code")
+    ok.append(compare(os.path.join(W, "v27/an/counts_s9.json"), "counts_s9.json", "counts_s9.json", s))
+    # the earlier cutoff rule (TAGS=v4) without bootstrap: the scripts assert the registered values of stages s3 to s8
+    for f, lab in (("an27_main.py", "2018-2025 events, earlier cutoff rule"), ("an27_rep.py", "both periods, earlier cutoff rule"),
+                   ("an27_rep_b2.py", "susceptibility quintiles, earlier cutoff rule")):
+        s = run(os.path.join(W, "v27/code", f), "v27/code", {"TAGS": "v4", "BOOT": "0"}, ".v4")
+        reg = f.replace("an27_", "").replace(".py", "").replace("main", "main27").replace("rep", "rep27") + "_v4.json"
+        ok.append(compare(os.path.join(W, "v27/an", reg), reg, lab, s))
+
     if full:
-        # 5. attributable-fraction comparisons (event bootstrap; long)
-        place("s8_attributable_fraction", "afcore_v1.py", "v11/code")
+        # 6. stage s9 with one cutoff date per event and the event-level bootstrap (long)
+        for f, lab in (("an27_main.py", "2018-2025 events, one cutoff per event, bootstrap"), ("an27_rep.py", "both periods, one cutoff per event, bootstrap"),
+                       ("an27_rep_b2.py", "susceptibility quintiles, one cutoff per event")):
+            s = run(os.path.join(W, "v27/code", f), "v27/code", {"TAGS": "v5", "BOOT": "1"}, ".v5")
+            reg = f.replace("an27_", "").replace(".py", "").replace("main", "main27").replace("rep", "rep27") + "_v5.json"
+            ok.append(compare(os.path.join(W, "v27/an", reg), reg, lab, s))
+        # 7. attributable-fraction comparisons (event bootstrap; long)
         place("s3_models", "clr_exact.py", "v11/code")
         os.makedirs(os.path.join(W, "v11/an"), exist_ok=True)
         for f, reg, lab in [("af_robust_v2.py", "af_robust_register_v2.json", "attributable fractions: radii, estimators, bootstrap"),
