@@ -481,7 +481,7 @@
    }
   },
   "M3b_island": {
-   "label": "M3b class 3 by years since disturbance, pre-registered bins 0-10 / 10-20 / 20+",
+   "label": "M3b class 3 by years since disturbance, pre-specified bins 0-10 / 10-20 / 20+",
    "design": "island",
    "n": 14446,
    "n_case": 5744,
@@ -1564,7 +1564,7 @@
    }
   },
   "M3b_event": {
-   "label": "M3b class 3 by years since disturbance, pre-registered bins 0-10 / 10-20 / 20+",
+   "label": "M3b class 3 by years since disturbance, pre-specified bins 0-10 / 10-20 / 20+",
    "design": "event",
    "n": 28159,
    "n_case": 5744,
