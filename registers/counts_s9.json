@@ -1,0 +1,14 @@
+{
+ "canopy_class1_2020_2025": {
+  "rows": 1897,
+  "cases": 754,
+  "controls": 1143,
+  "cases_in_events_with_cases_and_controls": 754,
+  "controls_in_events_with_cases_and_controls": 1122,
+  "median_canopy_height_cases_m": 6.0,
+  "median_canopy_height_controls_m": 10.0
+ },
+ "source_layers": {
+  "landslide_geologically_sensitive_areas_2026_polygons": 168714
+ }
+}

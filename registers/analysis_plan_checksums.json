@@ -1,0 +1,33 @@
+{
+ "note": "SHA-256 checksums of the analysis plan and its three supplements. Each file was fixed before the corresponding models were fitted. The files are not part of this repository.",
+ "files": [
+  {
+   "document": "analysis plan",
+   "file": "數據憲章_v1_定稿.md",
+   "date": "2026-09-23",
+   "bytes": 4123,
+   "sha256": "bb92b6710efbe62a7eb48155c33d9003a469449702bb5e2fc282f0057b0463f1"
+  },
+  {
+   "document": "supplement 1 (susceptibility and stratified analyses)",
+   "file": "數據憲章_v1_補充_關3_高風險未崩塌立地.md",
+   "date": "2026-09-28",
+   "bytes": 4925,
+   "sha256": "90c7cf4b81bb41ca38cb05cae2dd1325e99b10a959ff30eea333e273d8a289cd"
+  },
+  {
+   "document": "supplement 2 (stand origin and canopy height)",
+   "file": "數據憲章_v1_補充_關4_林分來源與遺留.md",
+   "date": "2026-09-30",
+   "bytes": 7801,
+   "sha256": "8ba25565ca581359e3100f34a4f9533244580501ddf4c97e8ca440a98d523ab4"
+  },
+  {
+   "document": "supplement 3 (non-overlapping events of 2009-2017 and geologically sensitive areas)",
+   "file": "數據憲章_v1_補充_關5_獨立事件複驗.md",
+   "date": "2026-10-10",
+   "bytes": 9484,
+   "sha256": "a3d884f98d02c597cb2f8684f7fa8c85dfe2d747a12cdb0a6200cd29813a0d75"
+  }
+ ]
+}
