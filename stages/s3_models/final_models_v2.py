@@ -61,7 +61,7 @@ for design,d in [('island',bi),('event',be)]:
     o['H3_5-10_vs_10-20']={'cluster':wald_diff(mr,'C(tsd3_bin)[T.5-10]','C(tsd3_bin)[T.10-20]')}
     o['H3_5-10_vs_20+']={'cluster':wald_diff(mr,'C(tsd3_bin)[T.5-10]','C(tsd3_bin)[T.20+]')}
     o['H3_10-20_vs_20+']={'cluster':wald_diff(mr,'C(tsd3_bin)[T.10-20]','C(tsd3_bin)[T.20+]')}
-    o2,m2,mr2=fit(d,f"case~{TERR}+sc1+sc2+C(tsd3_bin2)",design,'M3b class 3 by years since disturbance, pre-registered bins 0-10 / 10-20 / 20+'); M[f'M3b_{design}']=o2
+    o2,m2,mr2=fit(d,f"case~{TERR}+sc1+sc2+C(tsd3_bin2)",design,'M3b class 3 by years since disturbance, pre-specified bins 0-10 / 10-20 / 20+'); M[f'M3b_{design}']=o2
     o2['H3_0-10_vs_10-20']={'cluster':wald_diff(mr2,'C(tsd3_bin2)[T.0-10]','C(tsd3_bin2)[T.10-20]')}
     o2['H3_0-10_vs_20+']={'cluster':wald_diff(mr2,'C(tsd3_bin2)[T.0-10]','C(tsd3_bin2)[T.20+]')}
     M[f'M3r_{design}']=fit(d,f"case~{TERR}+sc1+sc2+C(rec_bin)",design,'M3r class 3 by recovery ratio at cutoff')[0]
