@@ -22,6 +22,7 @@ attributes, `g5` rows of the 2009-2017 events, `v10/data` event-matched tags, `v
 | `s7_extensions` | Events of the 2009 inventory, slope bands, geologically sensitive areas, alternative estimators. | `af_log_interval_v2.py`, `extreme_v1.py`, `gsa_gap_v2.py`, `methods_cmp_v1.py`, `methods_cmp_v1b.py`, `slope_bands_v2.py` |
 | `s8_attributable_fraction` | Attributable-fraction comparisons: look-back windows, radii, estimators, distance rings, event bootstrap. | `af_rings_v3.py`, `af_robust_v2.py`, `af_window_v2.py`, `afcore_v1.py`, `boot_event_draws_v1.py`, `rep2009_age_rows_v1.py`, `rep_event_share_v1.py` |
 | `s9_event_cutoff` | One cutoff date per event for cases and controls (`tags_event_v5.csv`, `rep_rows_tagged_v5.csv`), all models of both periods with event-level bootstrap intervals (2,000 resamples of events), and the same models under the earlier cutoff rule for comparison. | `an27_main.py`, `an27_rep.py`, `an27_rep_b2.py`, `counts_s9.py`, `lib27.py`, `rep_rows_v5.py`, `tag_event_v5.py` |
+| `s10_all_slope_overlay` | Overlay with the landslide geologically sensitive areas on all slopes: sections S10 of `an27_main.py` and R4 of `an27_rep.py` with the slope filter removed, after the run on slopes of 39.5 degrees or less has reproduced the registered values. | `gsa_all.py` |
 
 Original run order after the event tags (`s2_event_tags/tag_event_v4.py`): `s3_models` final_models_v2, af_fresh_v1, robust_v1;
 `s1_landtrendr/s2_check_v1`; `s4_unfailed_high_risk/bright_spots_v1`; `s5_stand_origin` stand_origin_v1, stand_origin_sens2020_v1,
@@ -33,3 +34,6 @@ rebuilds `tags_event_v4.csv`), `rep_rows_v5.py` (source layers), then `an27_main
 the environment variables `TAGS` (`v5` one cutoff date per event, `v4` earlier cutoff rule) and `BOOT` (`1` event-level
 bootstrap, `0` point estimates only), and `counts_s9.py`. With `TAGS=v4` the scripts assert the registered values of stages
 `s3` to `s8` before writing their output.
+
+Stage `s10_all_slope_overlay` runs after stage s9 and reads its scripts from the same working folder (`v27/code`), with `TAGS=v5` and the
+event-level bootstrap (2,000 resamples of events, bootstrap labels with the suffix `:all`).
