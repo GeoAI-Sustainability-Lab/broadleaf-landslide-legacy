@@ -8,7 +8,8 @@ the analysis stages, the registers with the reference values these scripts wrote
 tables.
 
 Author: Yu-Chun Hsu, Department of Forestry, National Chung Hsing University, Taichung, Taiwan
-(ORCID https://orcid.org/0000-0002-6616-6906). Citation metadata is in `CITATION.cff`. Version 1.1.0 (2026-11-13).
+(ORCID https://orcid.org/0000-0002-6616-6906). Citation metadata is in `CITATION.cff`. Version 1.2.0 (2026-11-23).
+Every version is archived on Zenodo, and the concept DOI https://doi.org/10.5281/zenodo.24031140 always resolves to the latest version.
 
 ## What the analysis does
 
@@ -55,6 +56,8 @@ odds ratio of any legacy against class 0 under the definitions shared by the two
 3.58 (3.00 to 4.81) on all slopes,
 against 3.87 (2.78 to 4.69) for the events of 2018-2025.
 
+Overlay with the landslide geologically sensitive areas (`registers/gsa_all_v1.json`, stage `s10_all_slope_overlay`): on all slopes the areas hold 39.7% of the broadleaf cases and 14.5% of the controls of 2018-2025, and 1,261 of the 2,843 legacy cases (44.4%) lie outside them (42.8% under the definitions shared by the two periods). On slopes up to 39.5 degrees the shares are those of `registers/main27_v5.json` (42.0%, 13.3% and 40.6%).
+
 ## Repository layout
 
 ```
@@ -73,7 +76,8 @@ verify/independent_recompute.py   recomputes the main odds ratios and attributab
 ```
 pip install -r requirements.txt
 python verify/run_verify.py          # tags rebuild, models of stages s3 to s7, stage s9 without bootstrap (about 10 minutes)
-python verify/run_verify.py --all    # adds the event-level bootstrap of stage s9 and the comparisons of stage s8 (about three hours on two cores)
+python verify/run_verify.py --all    # adds the event-level bootstrap of stage s9, the comparisons of stage s8 and stage s10 (about three hours on two cores)
+python verify/run_verify.py --s10    # quick set and the all-slope overlay of stage s10 (about 15 minutes more)
 ```
 
 Each check prints PASS or FAIL, the number of compared values and the largest relative difference. Values must agree within
@@ -112,6 +116,7 @@ documentation as follows.
 | `tags v4`, `own` | earlier cutoff rule |
 | `tags v5`, `common` | one cutoff date per event |
 | `gsa`, `zoning` | landslide geologically sensitive areas (2026 layer) |
+| `stand_function` (`analysis_rows_v1`), `src` | stand origin of the 2018-2025 points: the management-use class (`FunctionTy`) of the forest type map of the fourth national forest resource inventory released in January 2017. Codes 1100, 2222 原生林 primary forest, 1200, 2221 經改造天然林 modified natural forest, 2100 半天然林 semi-natural forest, 2211 生產性人工林 productive plantation, 2212 保護性人工林 protective plantation. Plantations combine the last two. Of the 15,219 broadleaf and bamboo points, 14,974 have a class and 245 are unconfirmed |
 | `chm` | canopy height (m) |
 
 ## Data provenance and licences
@@ -123,14 +128,14 @@ remain subject to the terms of, their providers:
 |---|---|---|---|
 | Event-based landslide inventories 2004-2025 | Agency of Rural Development and Soil and Water Conservation (ARDSWC), Ministry of Agriculture, with image interpretation by National Cheng Kung University | Government Open Data Platform, https://data.gov.tw (one dataset per year, for example https://data.gov.tw/dataset/173374 for 2024 and https://data.gov.tw/dataset/177455 for 2025) | Open Government Data License, version 1.0 |
 | Annual landslide maps 2017-2024 | ARDSWC | https://data.gov.tw/dataset/166573, 166574, 166575, 166576, 166577, 166846, 168661 and 176015 | Open Government Data License, version 1.0 |
-| Forest type map, fourth national forest resource inventory | Forestry and Nature Conservation Agency, Ministry of Agriculture | https://data.gov.tw/dataset/57873 | Open Government Data License, version 1.0 |
+| Island-wide forest type distribution map, fourth national forest resource inventory (583,332 polygons): forest types of the 2009-2017 points | Forestry and Nature Conservation Agency, Ministry of Agriculture | https://data.gov.tw/dataset/57873 | Open Government Data License, version 1.0 |
 | 20 m digital elevation model | Ministry of the Interior | https://data.gov.tw/dataset/35430 | Open Government Data License, version 1.0 |
 | Landslide geologically sensitive areas (2026 layer, 168,714 polygons) | Geological Survey and Mining Management Agency, Ministry of Economic Affairs | area packages L0001-L0017 on https://data.gov.tw (one dataset per area, for example https://data.gov.tw/dataset/77886) | Open Government Data License, version 1.0 |
 | Landsat 5, 7, 8 and 9 Collection 2 Level 2 | U.S. Geological Survey | Google Earth Engine | no restrictions on use or redistribution |
 | Sentinel-2 Level-2A, 2019-2024 | European Space Agency, Copernicus | Google Earth Engine | Copernicus Sentinel data licence; contains modified Copernicus Sentinel data 2019-2024 |
 | GPM IMERG V07 half-hourly precipitation | NASA Goddard Earth Sciences Data and Information Services Center (Huffman et al., 2023, https://doi.org/10.5067/GPM/IMERG/3B-HH/07) | event rainfall table of the bamboo-landslide-terrain repository | NASA open data policy |
-| High Resolution Canopy Height Maps (Tolan et al., 2024) | Meta and World Resources Institute | AWS Open Data registry, dataforgood-fb-forests | CC BY 4.0 |
-| Case and control points, forest-type labels, event definitions | Hsu, Y.-C. (2026), https://doi.org/10.5281/zenodo.22702156 | Zenodo | MIT (as listed in the Zenodo record) |
+| Version 2 High Resolution Canopy Height Maps by WRI and Meta (Brandt et al., 2026), mosaic of images of 2010-2019, 1.2 m | Meta and World Resources Institute | AWS Open Data registry, https://registry.opendata.aws/dataforgood-fb-forestsv2/ | CC BY 4.0 |
+| Case and control points, forest-type labels and management-use classes of the 2018-2025 points (forest type map of the fourth national forest resource inventory released in January 2017, 348,617 polygons), event definitions | Hsu, Y.-C. (2026), https://doi.org/10.5281/zenodo.22702156 | Zenodo | MIT (as listed in the Zenodo record) |
 
 The government data are used under the Open Government Data License, version 1.0 (https://data.gov.tw/license), and the
 providers named above are the licensors. The tables in `data/frozen` are value-added data derived from these sources by the
@@ -138,6 +143,7 @@ stage scripts.
 
 ## Versions
 
+- 1.2.0 (2026-11-23): stage `s10_all_slope_overlay` (the overlay with the landslide geologically sensitive areas on all slopes, register `gsa_all_v1.json`, runner option `--s10`), the checksum of the research draft that states H1 to H5 in `registers/analysis_plan_checksums.json` (five documents), and in this documentation the stand-origin field, the two forest type maps of the fourth national forest resource inventory and the canopy height maps of version 2.
 - 1.1.0 (2026-11-13): stage `s9_event_cutoff` (one cutoff date per event for cases and controls, event-level bootstrap),
   its frozen tables (`tags_event_v5`, `rep_rows_tagged_v5`, `zoning_out_v1`, `s2_pairs_v1`) and registers, the checksums of
   the analysis plan (`registers/analysis_plan_checksums.json`) and the terms of this documentation.
@@ -167,6 +173,5 @@ Kennedy, R.E., Yang, Z., Cohen, W.B., 2010. Detecting trends in forest disturban
 series: 1. LandTrendr - Temporal segmentation algorithms. Remote Sensing of Environment 114, 2897-2910.
 https://doi.org/10.1016/j.rse.2010.07.008
 
-Tolan, J., Yang, H.-I., Nosarzewski, B., et al., 2024. Very high resolution canopy height maps from RGB imagery using
-self-supervised vision transformer and convolutional decoder trained on aerial lidar. Remote Sensing of Environment 300,
-113888. https://doi.org/10.1016/j.rse.2023.113888
+Brandt, J., Yi, S., Tolan, J., et al., 2026. CHMv2: Improvements in Global Canopy Height Mapping using DINOv3. arXiv preprint
+2603.06382. https://doi.org/10.48550/arXiv.2603.06382
