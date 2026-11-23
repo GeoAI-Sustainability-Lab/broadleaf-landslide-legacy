@@ -5,8 +5,10 @@ Rebuilds the working folder that the stage scripts expect (verify/_work) from th
 stage scripts in their original order and compares every output with the reference registers in registers/.
 
     python verify/run_verify.py          # quick set
-    python verify/run_verify.py --all    # adds the attributable-fraction comparisons (stages/s8) and the event-level
+    python verify/run_verify.py --all    # adds the attributable-fraction comparisons (stages/s8), the event-level
                                          # bootstrap of stage s9 (2,000 resamples of events; about three hours on two cores)
+                                         # and the all-slope overlay of stage s10
+    python verify/run_verify.py --s10    # quick set and the all-slope overlay of stage s10 (about 15 minutes more)
 
 The stage scripts are stored with the placeholder @WORK@ for the working folder; the runner writes a runnable copy of each
 script into verify/_work with @WORK@ replaced by the absolute path of verify/_work. Checks marked "unrounded" run the stage
@@ -98,7 +100,7 @@ def compare(out_path, ref_rel, label, secs):
     return not bad
 
 
-def main(full):
+def main(full, s10=False):
     if os.path.exists(W): shutil.rmtree(W)
     os.makedirs(W)
     unpack("point_dates_v1.csv", "g0/point_dates_v1.csv")
@@ -189,6 +191,13 @@ def main(full):
         reg = f.replace("an27_", "").replace(".py", "").replace("main", "main27").replace("rep", "rep27") + "_v4.json"
         ok.append(compare(os.path.join(W, "v27/an", reg), reg, lab, s))
 
+    if full or s10:
+        # 5b. stage s10: the overlay with the geologically sensitive areas on all slopes (event-level bootstrap)
+        for f in ("main27_v5.json", "rep27_v5.json"): shutil.copy(os.path.join(REG, f), os.path.join(W, "reference", f))
+        p = place("s10_all_slope_overlay", "gsa_all.py", "v27/code")
+        s = run(p, "v27/code")
+        ok.append(compare(os.path.join(W, "v27/an/gsa_all_v1.json"), "gsa_all_v1.json", "overlay with the sensitive areas, all slopes", s))
+
     if full:
         # 6. stage s9 with one cutoff date per event and the event-level bootstrap (long)
         for f, lab in (("an27_main.py", "2018-2025 events, one cutoff per event, bootstrap"), ("an27_rep.py", "both periods, one cutoff per event, bootstrap"),
@@ -213,4 +222,4 @@ def main(full):
 
 
 if __name__ == "__main__":
-    sys.exit(0 if main("--all" in sys.argv) else 1)
+    sys.exit(0 if main("--all" in sys.argv, "--s10" in sys.argv) else 1)
