@@ -1,0 +1,356 @@
+{
+ "S10": {
+  "le39.5": {
+   "cases_inside_share": 0.4195780006918021,
+   "controls_inside_share": 0.13344744950359466,
+   "n_cases": 2891,
+   "n_control_rows": 14605,
+   "legacy_cases": 1376,
+   "legacy_cases_outside": 559,
+   "legacy_cases_outside_share": 0.40625,
+   "legacy_OR_outside": {
+    "OR": 3.672714752883086,
+    "ci": [
+     3.1219217340145535,
+     4.320682837458406
+    ],
+    "p": 0.0,
+    "beta": 1.300931103294457,
+    "se": 0.08289915851898531,
+    "ci_boot": [
+     2.6907005806375404,
+     4.540650880466403
+    ]
+   },
+   "legacy_OR_inside": {
+    "OR": 4.021207176186962,
+    "ci": [
+     3.149531223298889,
+     5.134131401586994
+    ],
+    "p": 0.0,
+    "beta": 1.3915821501359575,
+    "se": 0.12465741141493158,
+    "ci_boot": [
+     2.307406127416186,
+     5.6067010741714975
+    ]
+   },
+   "interaction": {
+    "OR": 1.094886874356444,
+    "ci": [
+     0.8176431524717903,
+     1.4661374757607146
+    ],
+    "p": 0.5428422311136667,
+    "beta": 0.09065104684150047,
+    "se": 0.14896955526784167,
+    "ci_boot": [
+     0.7121575822285273,
+     1.4510736231315524
+    ]
+   },
+   "zone_OR_intact": {
+    "OR": 2.5137087181961304,
+    "ci": [
+     2.1045332859872015,
+     3.0024383847990412
+    ],
+    "p": 0.0,
+    "beta": 0.9217592395715187,
+    "se": 0.09064567035238834,
+    "ci_boot": [
+     2.0683394511697615,
+     3.078825790863744
+    ]
+   },
+   "AF_outside": {
+    "point": 0.2451217836541962,
+    "ci_mc": [
+     0.22192056257116388,
+     0.2667722791059628
+    ],
+    "ci_boot": [
+     0.1651632237436514,
+     0.31430080754922063
+    ]
+   },
+   "outside_by_component": {
+    "disturbance_without_catalogue_scar": 225,
+    "older_scar_within_50m_polygon_not_containing_point": 200,
+    "scar_newer_than_zone_plan": 115,
+    "older_scar_polygon_contains_point": 19
+   },
+   "outside_share_by_component": {
+    "disturbance_without_catalogue_scar": 0.40250447227191416,
+    "older_scar_within_50m_polygon_not_containing_point": 0.35778175313059035,
+    "scar_newer_than_zone_plan": 0.20572450805008943,
+    "older_scar_polygon_contains_point": 0.03398926654740608
+   },
+   "coverage_by_phase": {
+    "plan_2014_2016": {
+     "cases": 2213,
+     "cases_inside_share": 0.3551739719837325,
+     "control_rows": 11701,
+     "controls_inside_share": 0.1113580035894368,
+     "legacy_cases_outside_share": 0.47515527950310554,
+     "zones": 12
+    },
+    "plan_2021_2025": {
+     "cases": 678,
+     "cases_inside_share": 0.6297935103244838,
+     "control_rows": 2904,
+     "controls_inside_share": 0.22245179063360881,
+     "legacy_cases_outside_share": 0.24390243902439024,
+     "zones": 5
+    }
+   },
+   "main_definition_outside": {
+    "n": 1531,
+    "outside": 642,
+    "outside_by_class": {
+     "1": 157,
+     "2": 312,
+     "3": 173
+    }
+   },
+   "screening": {
+    "class2": {
+     "cases": 0.2673815288827395,
+     "controls": 0.0389592605272167,
+     "ratio": 6.863105851199316
+    },
+    "class1": {
+     "cases": 0.14527845036319612,
+     "controls": 0.04957206436152003,
+     "ratio": 2.9306516126443083
+    },
+    "class3": {
+     "cases": 0.11691456243514355,
+     "controls": 0.07278329339267374,
+     "ratio": 1.6063378968629083
+    },
+    "classes_1_3": {
+     "cases": 0.5295745416810792,
+     "controls": 0.16131461828141047,
+     "ratio": 3.282867649088354
+    },
+    "legacy_shared": {
+     "cases": 0.47595987547561397,
+     "controls": 0.14974323861691202,
+     "ratio": 3.1785066215461097
+    },
+    "gsa": {
+     "cases": 0.4195780006918021,
+     "controls": 0.13344744950359466,
+     "ratio": 3.1441440226289226
+    },
+    "gsa_or_legacy": {
+     "cases": 0.6129367001037703,
+     "controls": 0.23382403286545703,
+     "ratio": 2.6213588594481894
+    },
+    "legacy_outside_gsa": {
+     "cases": 0.19335869941196818,
+     "controls": 0.10037658336186238,
+     "ratio": 1.9263327455059993
+    }
+   }
+  },
+  "all": {
+   "cases_inside_share": 0.3971100278551532,
+   "controls_inside_share": 0.14485835378095024,
+   "n_cases": 5744,
+   "n_control_rows": 22415,
+   "legacy_cases": 2535,
+   "legacy_cases_outside": 1086,
+   "legacy_cases_outside_share": 0.4284023668639053,
+   "legacy_OR_outside": {
+    "OR": 3.2569809938933445,
+    "ci": [
+     2.8775883276673904,
+     3.686394295038511
+    ],
+    "p": 0.0,
+    "beta": 1.180800690812945,
+    "se": 0.06318782331397427,
+    "ci_boot": [
+     2.532577465018506,
+     4.146529461473823
+    ]
+   },
+   "legacy_OR_inside": {
+    "OR": 2.7110363337712604,
+    "ci": [
+     2.2566860875232866,
+     3.2568632578819297
+    ],
+    "p": 0.0,
+    "beta": 0.9973309727768691,
+    "se": 0.09358855539042488,
+    "ci_boot": [
+     1.848910750049736,
+     3.5087219131031615
+    ]
+   },
+   "interaction": {
+    "OR": 0.8323770813690041,
+    "ci": [
+     0.6677857502361781,
+     1.0375357745254947
+    ],
+    "p": 0.10263991586543986,
+    "beta": -0.18346971803607584,
+    "se": 0.11240723062993686,
+    "ci_boot": [
+     0.5598713305704124,
+     1.113789201379569
+    ]
+   },
+   "zone_OR_intact": {
+    "OR": 2.451662586673963,
+    "ci": [
+     2.143224825869408,
+     2.8044885288498005
+    ],
+    "p": 0.0,
+    "beta": 0.8967664012128511,
+    "se": 0.06859937677516459,
+    "ci_boot": [
+     2.0161093694339356,
+     3.056813455255975
+    ]
+   },
+   "AF_outside": {
+    "point": 0.2203040771443145,
+    "ci_mc": [
+     0.20355225701737398,
+     0.23647923236755078
+    ],
+    "ci_boot": [
+     0.15494682992936368,
+     0.2807610414410009
+    ]
+   },
+   "outside_by_component": {
+    "disturbance_without_catalogue_scar": 431,
+    "older_scar_within_50m_polygon_not_containing_point": 390,
+    "scar_newer_than_zone_plan": 233,
+    "older_scar_polygon_contains_point": 32
+   },
+   "outside_share_by_component": {
+    "disturbance_without_catalogue_scar": 0.39686924493554326,
+    "older_scar_within_50m_polygon_not_containing_point": 0.35911602209944754,
+    "scar_newer_than_zone_plan": 0.214548802946593,
+    "older_scar_polygon_contains_point": 0.029465930018416207
+   },
+   "coverage_by_phase": {
+    "plan_2014_2016": {
+     "cases": 4616,
+     "cases_inside_share": 0.34380415944540726,
+     "control_rows": 18317,
+     "controls_inside_share": 0.12507506687776382,
+     "legacy_cases_outside_share": 0.48598625066102596,
+     "zones": 12
+    },
+    "plan_2021_2025": {
+     "cases": 1128,
+     "cases_inside_share": 0.6152482269503546,
+     "control_rows": 4098,
+     "controls_inside_share": 0.2332845290385554,
+     "legacy_cases_outside_share": 0.25931677018633537,
+     "zones": 5
+    }
+   },
+   "main_definition_outside": {
+    "n": 2843,
+    "outside": 1261,
+    "outside_by_class": {
+     "1": 331,
+     "2": 590,
+     "3": 340
+    }
+   },
+   "screening": {
+    "class2": {
+     "cases": 0.24373259052924792,
+     "controls": 0.04880660272139192,
+     "ratio": 4.993844622224033
+    },
+    "class1": {
+     "cases": 0.13231197771587744,
+     "controls": 0.05317867499442338,
+     "ratio": 2.4880645809575443
+    },
+    "class3": {
+     "cases": 0.1189066852367688,
+     "controls": 0.07628819986616105,
+     "ratio": 1.5586510816270016
+    },
+    "classes_1_3": {
+     "cases": 0.49495125348189417,
+     "controls": 0.17827347758197634,
+     "ratio": 2.77635944614531
+    },
+    "legacy_shared": {
+     "cases": 0.4413300835654596,
+     "controls": 0.16274815971447693,
+     "ratio": 2.711736245372746
+    },
+    "gsa": {
+     "cases": 0.3971100278551532,
+     "controls": 0.14485835378095024,
+     "ratio": 2.741367808553514
+    },
+    "gsa_or_legacy": {
+     "cases": 0.5861768802228412,
+     "controls": 0.2480481820209681,
+     "ratio": 2.3631573327688824
+    },
+    "legacy_outside_gsa": {
+     "cases": 0.18906685236768803,
+     "controls": 0.10318982824001785,
+     "ratio": 1.83222373360213
+    }
+   }
+  }
+ },
+ "R4": {
+  "le39.5": {
+   "OR": 2.8652942669913823,
+   "ci": [
+    2.403008498101315,
+    3.4165136090615436
+   ],
+   "p": 0.0,
+   "beta": 1.0526710558840466,
+   "se": 0.08977018504132087,
+   "ci_boot": [
+    1.9799901788336172,
+    5.394392005075601
+   ]
+  },
+  "all": {
+   "OR": 2.9412636100167338,
+   "ci": [
+    2.572874626921236,
+    3.3623992141275467
+   ],
+   "p": 0.0,
+   "beta": 1.0788392883387365,
+   "se": 0.06827320543180636,
+   "ci_boot": [
+    2.3209984289243293,
+    4.354529691059351
+   ]
+  }
+ },
+ "validation": {
+  "S10_le39.5_equals_register": true,
+  "R4_le39.5_equals_register": true
+ },
+ "meta": {
+  "boot": 2000,
+  "note": "le39.5 reproduces S10 of main27_v5.json and R4 of rep27_v5.json; all uses the bootstrap labels with the suffix ':all'"
+ }
+}

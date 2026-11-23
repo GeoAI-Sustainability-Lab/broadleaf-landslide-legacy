@@ -7,7 +7,7 @@ Reference values written by the stage scripts. Files in `unrounded/` were produc
 | `af_rings_register_v3.json` | s8_attributable_fraction/af_rings_v3.py (--all) | yes |
 | `af_robust_register_v2.json` | s8_attributable_fraction/af_robust_v2.py (--all) | yes |
 | `af_window_register_v2.json` | s8_attributable_fraction/af_window_v2.py (--all) | yes |
-| `analysis_plan_checksums.json` | SHA-256 checksums, dates and sizes of the analysis plan and its three supplements (the files are not part of the repository) | no |
+| `analysis_plan_checksums.json` | SHA-256 checksums, dates and sizes of the five pre-specification documents: the research draft that states H1 to H5, the analysis plan and its three supplements (the files are not part of the repository) | no |
 | `assembly_register_v1.json` | s0_data_contract/assemble_v1.py | no |
 | `boot_event_draws_register_v1.json` | s8_attributable_fraction/boot_event_draws_v1.py (--all) | yes |
 | `calibration_register_v1.json` | s1_landtrendr/calibrate_v1.py | no |
@@ -16,6 +16,7 @@ Reference values written by the stage scripts. Files in `unrounded/` were produc
 | `counts_s9.json` | s9_event_cutoff/counts_s9.py | yes |
 | `events_v1.csv` | s3_models/robust_v1.py | no |
 | `extreme_register_v1.json` | s7_extensions/extreme_v1.py | yes |
+| `gsa_all_v1.json` | s10_all_slope_overlay/gsa_all.py (--all or --s10) | yes |
 | `gsa_gap_register_v2.json` | s7_extensions/gsa_gap_v2.py | no |
 | `loeo_v1.csv` | s3_models/robust_v1.py | no |
 | `main27_v4.json` | s9_event_cutoff/an27_main.py (TAGS=v4, BOOT=0) | yes |

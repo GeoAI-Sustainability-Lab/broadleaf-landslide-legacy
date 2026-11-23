@@ -1,6 +1,13 @@
 {
- "note": "SHA-256 checksums of the analysis plan and its three supplements. Each file was fixed before the corresponding models were fitted. The files are not part of this repository.",
+ "note": "SHA-256 checksums of the five pre-specification documents: the research draft that states H1 to H5, the analysis plan and its three supplements. Each document was fixed before the corresponding models were fitted. The documents are not part of this repository.",
  "files": [
+  {
+   "document": "research draft (questions and hypotheses H1 to H5)",
+   "file": "研究草案_v2_緩坡闊葉林崩塌的立地機制.md",
+   "date": "2026-09-23",
+   "bytes": 26882,
+   "sha256": "ec9913eb5ac090254d91e00fcc1a5eaa831e3af97d7bb636880c842feac39264"
+  },
   {
    "document": "analysis plan",
    "file": "數據憲章_v1_定稿.md",
