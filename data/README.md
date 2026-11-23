@@ -9,7 +9,7 @@ rows and columns; `verify/run_verify.py` checks the md5 before use.
 | `tags_island_v3.csv.gz` | 20,585 | Island-wide design (one row per point): case status, forest type, terrain, legacy tags, site classes | stages/s1_landtrendr/class3_tag_v1.py (from stages/s0_data_contract/tag_v1.py) |
 | `rep_rows_tagged_v1.csv.gz` | 76,553 | Events of 2009-2017 under the earlier cutoff rule: event-matched rows with legacy tags and susceptibility quantiles | stages/s6_replication/rep_analysis_v1.py |
 | `rep_rows_v1.csv.gz` | 117,020 | Events of 2009-2017: event-matched rows before tagging | stages/s6_replication/build_rows_v1.py |
-| `analysis_rows_v1.csv.gz` | 15,219 | Per-point attributes: canopy height (Meta/WRI) with image date, forest function class, distances to roads, rivers and debris-flow torrents | point extraction of the source layers |
+| `analysis_rows_v1.csv.gz` | 15,219 | Per-point attributes: canopy height (Meta/WRI, version 2) with image date, stand origin (`stand_function`, the management-use class of the forest type map released in January 2017, see the main README), distances to roads, rivers and debris-flow torrents | point extraction of the source layers |
 | `bright_rows_v1.csv.gz` | 40,559 | Landslide susceptibility scores (terrain and event rainfall) and quantiles per event-matched row | stages/s4_unfailed_high_risk/bright_spots_v1.py |
 | `catalog_matches_within100m_v1.csv.gz` | 18,342 | Event-inventory polygons within 100 m of each point, with dates and distance | stages/s0_data_contract/gate0_scan.py, assemble_v1.py |
 | `annual_state_matches_within50m_v1.csv.gz` | 25,465 | Annual landslide-state polygons within 50 m of each point, with map year and image date | stages/s0_data_contract/gate0_scan.py, assemble_v1.py |
