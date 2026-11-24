@@ -23,6 +23,7 @@ attributes, `g5` rows of the 2009-2017 events, `v10/data` event-matched tags, `v
 | `s8_attributable_fraction` | Attributable-fraction comparisons: look-back windows, radii, estimators, distance rings, event bootstrap. | `af_rings_v3.py`, `af_robust_v2.py`, `af_window_v2.py`, `afcore_v1.py`, `boot_event_draws_v1.py`, `rep2009_age_rows_v1.py`, `rep_event_share_v1.py` |
 | `s9_event_cutoff` | One cutoff date per event for cases and controls (`tags_event_v5.csv`, `rep_rows_tagged_v5.csv`), all models of both periods with event-level bootstrap intervals (2,000 resamples of events), and the same models under the earlier cutoff rule for comparison. | `an27_main.py`, `an27_rep.py`, `an27_rep_b2.py`, `counts_s9.py`, `lib27.py`, `rep_rows_v5.py`, `tag_event_v5.py` |
 | `s10_all_slope_overlay` | Overlay with the landslide geologically sensitive areas on all slopes: sections S10 of `an27_main.py` and R4 of `an27_rep.py` with the slope filter removed, after the run on slopes of 39.5 degrees or less has reproduced the registered values. | `gsa_all.py` |
+| `s11_replication_early_cases` | Replication period: the broadleaf cases whose event cutoff falls in an earlier calendar year than the pre-event image of their own polygon, described and left out in a refit of the replication odds ratios, after the fit with all cases has reproduced the registered values. | `early_cases.py` |
 
 Original run order after the event tags (`s2_event_tags/tag_event_v4.py`): `s3_models` final_models_v2, af_fresh_v1, robust_v1;
 `s1_landtrendr/s2_check_v1`; `s4_unfailed_high_risk/bright_spots_v1`; `s5_stand_origin` stand_origin_v1, stand_origin_sens2020_v1,
@@ -37,3 +38,7 @@ bootstrap, `0` point estimates only), and `counts_s9.py`. With `TAGS=v4` the scr
 
 Stage `s10_all_slope_overlay` runs after stage s9 and reads its scripts from the same working folder (`v27/code`), with `TAGS=v5` and the
 event-level bootstrap (2,000 resamples of events, bootstrap labels with the suffix `:all`).
+
+Stage `s11_replication_early_cases` also runs after stage s9 from the same working folder (`v27/code`). It reads `rep_rows_tagged_v5.csv` and
+`rep_rows_v1.csv` (own cutoff dates of the 2009-2017 cases), with the event-level bootstrap of `lib27.py` (2,000 resamples of events,
+bootstrap labels as registered).
