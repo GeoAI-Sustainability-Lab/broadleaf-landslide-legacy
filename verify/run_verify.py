@@ -7,8 +7,9 @@ stage scripts in their original order and compares every output with the referen
     python verify/run_verify.py          # quick set
     python verify/run_verify.py --all    # adds the attributable-fraction comparisons (stages/s8), the event-level
                                          # bootstrap of stage s9 (2,000 resamples of events; about three hours on two cores)
-                                         # and the all-slope overlay of stage s10
+                                         # and the all-slope overlay of stage s10 and stage s11
     python verify/run_verify.py --s10    # quick set and the all-slope overlay of stage s10 (about 15 minutes more)
+    python verify/run_verify.py --s11    # quick set and the replication without the flagged cases of stage s11 (about 10 minutes more)
 
 The stage scripts are stored with the placeholder @WORK@ for the working folder; the runner writes a runnable copy of each
 script into verify/_work with @WORK@ replaced by the absolute path of verify/_work. Checks marked "unrounded" run the stage
@@ -100,7 +101,7 @@ def compare(out_path, ref_rel, label, secs):
     return not bad
 
 
-def main(full, s10=False):
+def main(full, s10=False, s11=False):
     if os.path.exists(W): shutil.rmtree(W)
     os.makedirs(W)
     unpack("point_dates_v1.csv", "g0/point_dates_v1.csv")
@@ -198,6 +199,14 @@ def main(full, s10=False):
         s = run(p, "v27/code")
         ok.append(compare(os.path.join(W, "v27/an/gsa_all_v1.json"), "gsa_all_v1.json", "overlay with the sensitive areas, all slopes", s))
 
+    if full or s11:
+        # 5c. stage s11: the replication period without the cases whose event cutoff falls in an earlier calendar year than the
+        # pre-event image of their own polygon (event-level bootstrap)
+        shutil.copy(os.path.join(REG, "rep27_v5.json"), os.path.join(W, "reference", "rep27_v5.json"))
+        p = place("s11_replication_early_cases", "early_cases.py", "v27/code")
+        s = run(p, "v27/code")
+        ok.append(compare(os.path.join(W, "v27/an/rep_early_cases_v1.json"), "rep_early_cases_v1.json", "replication without the flagged cases", s))
+
     if full:
         # 6. stage s9 with one cutoff date per event and the event-level bootstrap (long)
         for f, lab in (("an27_main.py", "2018-2025 events, one cutoff per event, bootstrap"), ("an27_rep.py", "both periods, one cutoff per event, bootstrap"),
@@ -222,4 +231,4 @@ def main(full, s10=False):
 
 
 if __name__ == "__main__":
-    sys.exit(0 if main("--all" in sys.argv, "--s10" in sys.argv) else 1)
+    sys.exit(0 if main("--all" in sys.argv, "--s10" in sys.argv, "--s11" in sys.argv) else 1)
