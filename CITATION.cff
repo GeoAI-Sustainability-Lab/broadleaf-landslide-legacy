@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use these data or this code, please cite them as below."
 title: "Landslide and disturbance legacies in the broadleaf forests of Taiwan: data, code and verification chain"
-version: 1.2.0
-date-released: 2026-11-23
+version: 1.3.0
+date-released: 2026-11-24
 license: MIT
 repository-code: "https://github.com/GeoAI-Sustainability-Lab/broadleaf-landslide-legacy"
 authors:

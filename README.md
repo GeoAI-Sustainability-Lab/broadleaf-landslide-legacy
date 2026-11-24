@@ -8,7 +8,7 @@ the analysis stages, the registers with the reference values these scripts wrote
 tables.
 
 Author: Yu-Chun Hsu, Department of Forestry, National Chung Hsing University, Taichung, Taiwan
-(ORCID https://orcid.org/0000-0002-6616-6906). Citation metadata is in `CITATION.cff`. Version 1.2.0 (2026-11-23).
+(ORCID https://orcid.org/0000-0002-6616-6906). Citation metadata is in `CITATION.cff`. Version 1.3.0 (2026-11-24).
 Every version is archived on Zenodo, and the concept DOI https://doi.org/10.5281/zenodo.24031140 always resolves to the latest version.
 
 ## What the analysis does
@@ -58,6 +58,8 @@ against 3.87 (2.78 to 4.69) for the events of 2018-2025.
 
 Overlay with the landslide geologically sensitive areas (`registers/gsa_all_v1.json`, stage `s10_all_slope_overlay`): on all slopes the areas hold 39.7% of the broadleaf cases and 14.5% of the controls of 2018-2025, and 1,261 of the 2,843 legacy cases (44.4%) lie outside them (42.8% under the definitions shared by the two periods). On slopes up to 39.5 degrees the shares are those of `registers/main27_v5.json` (42.0%, 13.3% and 40.6%).
 
+Replication cases flagged by stage `s11_replication_early_cases` (`registers/rep_early_cases_v1.json`): 1,159 of the 6,033 broadleaf cases of 2009-2017 have an event cutoff in an earlier calendar year than the pre-event image of their own polygon, and their canopy disturbance comes from loss segments that end before the event cutoff year in the LandTrendr fit of that pre-event year. Without them the odds ratios on all slopes under the definitions shared by the two periods are 3.83 (3.45 to 4.76) for any legacy, 5.27 (4.61 to 6.17) for inventory landslide scars and 3.03 (2.58 to 4.24) for canopy disturbance (event-level bootstrap), against 3.58, 5.03 and 2.79 with all cases.
+
 ## Repository layout
 
 ```
@@ -76,8 +78,9 @@ verify/independent_recompute.py   recomputes the main odds ratios and attributab
 ```
 pip install -r requirements.txt
 python verify/run_verify.py          # tags rebuild, models of stages s3 to s7, stage s9 without bootstrap (about 10 minutes)
-python verify/run_verify.py --all    # adds the event-level bootstrap of stage s9, the comparisons of stage s8 and stage s10 (about three hours on two cores)
+python verify/run_verify.py --all    # adds the event-level bootstrap of stage s9, the comparisons of stage s8 and stages s10 and s11 (about three hours on two cores)
 python verify/run_verify.py --s10    # quick set and the all-slope overlay of stage s10 (about 15 minutes more)
+python verify/run_verify.py --s11    # quick set and the replication without the flagged cases of stage s11 (about 10 minutes more)
 ```
 
 Each check prints PASS or FAIL, the number of compared values and the largest relative difference. Values must agree within
@@ -143,6 +146,7 @@ stage scripts.
 
 ## Versions
 
+- 1.3.0 (2026-11-24): stage `s11_replication_early_cases` (the replication period without the broadleaf cases whose event cutoff falls in an earlier calendar year than the pre-event image of their own polygon, register `rep_early_cases_v1.json`, runner option `--s11`).
 - 1.2.0 (2026-11-23): stage `s10_all_slope_overlay` (the overlay with the landslide geologically sensitive areas on all slopes, register `gsa_all_v1.json`, runner option `--s10`), the checksum of the research draft that states H1 to H5 in `registers/analysis_plan_checksums.json` (five documents), and in this documentation the stand-origin field, the two forest type maps of the fourth national forest resource inventory and the canopy height maps of version 2.
 - 1.1.0 (2026-11-13): stage `s9_event_cutoff` (one cutoff date per event for cases and controls, event-level bootstrap),
   its frozen tables (`tags_event_v5`, `rep_rows_tagged_v5`, `zoning_out_v1`, `s2_pairs_v1`) and registers, the checksums of
