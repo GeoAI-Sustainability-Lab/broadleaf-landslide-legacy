@@ -28,6 +28,7 @@ Reference values written by the stage scripts. Files in `unrounded/` were produc
 | `rep27_b2_v5.json` | s9_event_cutoff/an27_rep_b2.py (TAGS=v5; --all) | yes |
 | `rep27_v4.json` | s9_event_cutoff/an27_rep.py (TAGS=v4, BOOT=0) | yes |
 | `rep27_v5.json` | s9_event_cutoff/an27_rep.py (TAGS=v5, BOOT=1; --all) | yes |
+| `rep_early_cases_v1.json` | s11_replication_early_cases/early_cases.py (--all or --s11) | yes |
 | `rep_build_register_v1.json` | s6_replication/build_rows_v1.py | no |
 | `rep_event_share_v1.json` | s8_attributable_fraction/rep_event_share_v1.py (--all) | yes |
 | `rep_explore_register_v1.json` | s6_replication/rep_explore_v1.py | no |
